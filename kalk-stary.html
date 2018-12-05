@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kalk-stary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/icon.ico" />
+<link rel="icon" href="img/icon.png" type="image/png"/>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="myScript.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <div class="kalkulator">
+        <h6>KALKULATOR</h6>
+        <br>
+        <table border= "1" bgcolor= "#daa54e" align="center">
+            <tr>
+                <td colspan= "5" bgcolor= "#ffffff" >
+                    <form>
+                        <input class="pole" name="display" value="0" size=50></td>
+            </tr>
+            <tr>
+                <td><input class="komorka" type="button" value="  7  " onClick="addChar(this.form.display, '7')"></td>
+                <td><input class="komorka" type="button" value="  8  " onClick="addChar(this.form.display, '8')"></td>
+                <td><input class="komorka" type="button" value="  9  " onClick="addChar(this.form.display, '9')"></td>
+                <td><input class="komorka" type="button" value=" +/- " onClick="changeSign(this.form.display)"></td>
+                <td><input class="komorka" type="button" value="  sq " onClick="if (checkNum(this.form.display.value)){ square(this.form) }"></td>
+            </tr>
+
+            <tr>
+                <td><input class="komorka" type="button" value="  4  " onClick="addChar(this.form.display, '4')"></td>
+                <td><input class="komorka" type="button" value="  5  " onClick="addChar(this.form.display, '5')"></td>
+                <td><input class="komorka" type="button" value="  6  " onClick="addChar(this.form.display, '6')"></td>
+                <td><input class="komorka" type="button" value="  +  " onClick="addChar(this.form.display, '+')"></td>
+                <td><input class="komorka" type="button" value="  -  " onClick="addChar(this.form.display, '-')"></td>
+            </tr>
+
+            <tr>
+                <td><input class="komorka" type="button" value="  1  " onClick="addChar(this.form.display, '1')"></td>
+                <td><input class="komorka" type="button" value="  2  " onClick="addChar(this.form.display, '2')"></td>
+                <td><input class="komorka" type="button" value="  3  " onClick="addChar(this.form.display, '3')"></td>
+                <td><input class="komorka" type="button" value="  x  " onClick="addChar(this.form.display, '*')"></td>
+                <td><input class="komorka" type="button" value="  /  " onClick="addChar(this.form.display, '/')"></td>
+            </tr>
+
+            <tr>
+                <td><input class="komorka" type="button" value="  0  " onClick="addChar(this.form.display, '0')"></td>
+                <td><input class="komorka" type="button" value="  .  " onClick="addChar(this.form.display, '.')"></td>
+                <td><input class="komorka" type="button" value=" sqrt" onClick="if (checkNum(this.form.display.value)){ sqrt(this.form) }"></td>
+                <td><input class="komorka" type="button" value="  (  " onClick="addChar(this.form.display, '(')"></td>
+                <td><input class="komorka" type="button" value="  )  " onClick="addChar(this.form.display, ')')"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input class="komorka" type="button" value="  wynik  " name="enter" onClick="if (checkNum(this.form.display.value)){ compute(this.form) }"></td>
+                <td><input class="komorka" type="button" value=" delete all " onClick="this.form.display.value = 0 "></td>
+                <td><input class="komorka" type="button" value=" delete " onClick="deleteChar(this.form.display)"></td>
+            </tr>
+        </form>
+        </table>
+    </div>
+    <br><br>
+    <a href="index.html" style="color:#daa54e; text-decoration: none; font-size:20px; font-family:Helvetica">WRÓĆ</a>
+</body>
+</html>

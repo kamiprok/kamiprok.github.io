@@ -1,0 +1,334 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Delta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="delta/delta.css" />
+    <script src="delta/delta.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="background-color:#d3d3d3; margin-left:100px">
+    <button class="tablink" onclick="openPage('DELTA', this, '#dddddd')" id="defaultOpen" autofocus>DELTA</button>
+    <button class="tablink" onclick="openPage('VATtab', this, '#dddddd')" >VAT</button>
+    <button class="tablink" onclick="openPage('HORNER', this, '#dddddd')">HARMONICZNY</button>
+    <button class="tablink" onclick="openPage('TBD', this, '#dddddd')">PORTFEL</button>
+        
+        <div id="DELTA" class="tabcontent">
+            <header>
+                <h1>Równanie kwadratowe</h1>
+            </header>
+            <div class="main">
+                <form name="myForm" onsubmit="return validateForm()" method="submit">
+                    <input id="pierwsza" type="text" size="1"> &lowast; x<sup><small>2</small></sup> + <input id="druga" type="text" size="1"> &lowast; x + <input id="trzecia" type="text" size="1"> = 0
+                    <br><br>
+                    <span class='boxbox' id='box'><textarea rows='2' cols='50' id='msg' value='0' type='text' readonly="readonly" ></textarea></span>
+                    <input type="button"  class='button' value="Policz!" id="policz" onclick="equation()">
+                    <h2>Rozwiązanie</h2>
+                    <a>Delta: </a><input id="delta" type="text" size="5" readonly="readonly">
+                    <br>
+                    <h3>Odpowiedź</h3>
+                    <span id="odp"><textarea rows="4" cols="50" id="odpowiedz" readonly="readonly" ></textarea></span><br><br>
+                    <a>x<sub><small>1</small></sub> : </a><input id="pierw1" type="text" size="5" readonly="readonly"><br><br>
+                    <a>x<sub><small>2</small></sub> : </a><input id="pierw2" type="text" size="5" readonly="readonly"><br>
+                    <input type="button" class='button' value="Wyczyść" id="cancel" onclick="clearForm()">
+                </form>
+                <hr class='hr'><br>
+                <a href="../index.html" style="color:#daa54e; text-decoration: none; font-size:20px; font-family:Helvetica; padding:20px; background-color: #1f1f1f">WRÓĆ</a>
+            </div>
+        </div>
+
+        <div id="VATtab" class="tabcontent">
+            <h1>VAT</h1>
+            <span>
+                  <h3>Podaj cenę towaru:</h3>
+                  <textarea id='vat' vaule=''></textarea>
+                  <h3>Wybierz stawkę VAT:</h3>
+                  <select id='wartoscvat'>
+                      <option value="0.23">23%</option>
+                      <option value='0.08'>8%</option>
+                      <option value='0.03'>3%</option>
+                      <option value='0'>0%</option>
+                  </select>
+                  <button id='btn-vat' class='button' onclick='vatt()'>Policz!</button>
+                  <span id='wynik-vat' style='display:none'>
+                      <h3>Wartość netto:</h3>
+                      <textarea id='wartosc-netto' value='' readonly="readonly"></textarea>
+                      <h3>Wartość vat:</h3>
+                      <textarea id='wartosc-vat' value='' readonly="readonly"></textarea>
+                      <h3>Wartość brutto:</h3>
+                      <textarea id='wartosc-brutto' value='' readonly="readonly"></textarea>
+                      <br><br>
+                      <input type="button" class='button' value="Wyczyść" id="cancel" onclick="clearForm5()">
+                  </span>
+                <br><br><hr class='hr'><br>
+                <a href="../index.html" style="color:#daa54e; text-decoration: none; font-size:20px; font-family:Helvetica; padding:20px; background-color: #1f1f1f">WRÓĆ</a>
+              </span>
+                
+          </div>
+          
+          <div id="HORNER" class="tabcontent">
+            <h1>HARMONICZNY</h1>
+                <div>
+                    <h3>Podaj n:</h3>
+                    <textarea id='nh' value='0'></textarea><br><br>
+                    <button class='button' type="button" onclick="harmoniczny()">Licz!</button><br><br>
+                    <span id='harm' style='display:none'>
+                    <textarea id='xh' value='0' readonly='readonly'></textarea><br><br>
+                    <button class='button' type="button" onclick="harmoniczny_clear()">Reset</button><br><br></span>
+                </div>
+            <hr class='hr'><br><br>
+            <a href="../index.html" style="color:#daa54e; text-decoration: none; font-size:20px; font-family:Helvetica; padding:20px; background-color: #1f1f1f">WRÓĆ</a>
+
+                <script>
+                    function harmoniczny() {
+                        let nh = document.getElementById('nh').value;
+                        let xh = 0;
+                        let yh = 0;
+                        if (isNaN(nh)){
+                            alert('Wpisana wartość nie jest liczbą!');
+                            document.getElementById('nh').value = null;
+                        }
+                        else {
+                            for (ih=1; ih<=nh; ih++) {
+                                yh = 1 / ih;
+                                xh = xh + yh;
+                                document.getElementById('xh').value = xh;
+                                document.getElementById('harm').style.display = 'block';
+                            } 
+                        }
+                        
+                    }
+
+                    function harmoniczny_clear() {
+                        document.getElementById('nh').value = null;
+                        document.getElementById('xh').value = '';
+                        document.getElementById('harm').style.display = 'none';
+                    }
+                </script>
+          </div>
+          
+          <div id="TBD" class="tabcontent">
+            <h1>PORTFEL</h1>
+            
+            <div class='div1'>
+                <h3>Generate ATM:</h3>
+                <button class='button' type="button" onclick="myRandom()">Generate</button>
+                <p>200 - <textarea id="a" value="0" readonly='readonly'></textarea></p>
+                <p>100 - <textarea id="b" value="0" readonly='readonly'></textarea></p>
+                <p>50  - <textarea id="c" value="0" readonly='readonly'></textarea></p>
+                <p>20  - <textarea id="d" value="0" readonly='readonly'></textarea></p>
+                <p>10  - <textarea id="e" value="0" readonly='readonly'></textarea></p>
+                <p>Total: <textarea id='total' readonly='readonly'></textarea></p>
+            </div>
+            <div class='div2'>
+                <h3>Withdrawal amount:</h3>
+                <textarea id='withdrawal' value="0"></textarea><p></p>
+                <button class='button' type="button" onclick="myWithdrawal()">Withdraw</button>
+                
+                <p>200 - <textarea id="aa" value="0" readonly='readonly'></textarea></p>
+                <p>100 - <textarea id="bb" value="0" readonly='readonly'></textarea></p>
+                <p>50  - <textarea id="cc" value="0" readonly='readonly'></textarea></p>
+                <p>20  - <textarea id="dd" value="0" readonly='readonly'></textarea></p>
+                <p>10  - <textarea id="ee" value="0" readonly='readonly'></textarea></p>
+                <br>
+                <button class='button' type="button" onclick="bank_clear()">CLEAR ALL</button>
+            </div>
+            <div class='div3'>
+                <h3>Bank before withdrawal:</h3>
+                <p>200 - <textarea id="aaa" value="0" readonly='readonly'></textarea></p>
+                <p>100 - <textarea id="bbb" value="0" readonly='readonly'></textarea></p>
+                <p>50  - <textarea id="ccc" value="0" readonly='readonly'></textarea></p>
+                <p>20  - <textarea id="ddd" value="0" readonly='readonly'></textarea></p>
+                <p>10  - <textarea id="eee" value="0" readonly='readonly'></textarea></p>
+                <p>Total: <textarea id='total-after' readonly='readonly'></textarea></p>
+            </div>
+            <br><br><br><hr class='hr'><br><div class='div4'>
+            <a href="../index.html" style="color:#daa54e; text-decoration: none; font-size:20px; font-family:Helvetica; padding:20px; background-color: #1f1f1f">WRÓĆ</a> 
+            </div>
+            <style>
+            .div1 {
+                border: 1px solid #1f1f1f;
+                width: 25%;
+                height: 600px;
+                float: left;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .div2 {
+                border: 1px solid #1f1f1f;
+                width: 25%;
+                height: 600px;
+                float: left;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .div3 {
+                border: 1px solid #1f1f1f;
+                width: 25%;
+                height: 600px;
+                float: left;
+                padding: 20px;
+                text-align: center;
+            }
+            .div4 {
+                float: none;
+                clear: left;
+            }
+            </style>
+            <script>
+                function myRandom() {
+                    let a = Math.floor((Math.random() * 5) +1);
+                    document.getElementById('a').value = a;
+                    document.getElementById('aaa').value = a;
+                    let b = Math.floor((Math.random() * 5) +5);
+                    document.getElementById('b').value = b;
+                    document.getElementById('bbb').value = b;
+                    let c = Math.floor((Math.random() * 5) +1);
+                    document.getElementById('c').value = c;
+                    document.getElementById('ccc').value = c;
+                    let d = Math.floor((Math.random() * 10) +10);
+                    document.getElementById('d').value = d;
+                    document.getElementById('ddd').value = d;
+                    let e = Math.floor((Math.random() * 5) +5);
+                    document.getElementById('e').value = e;
+                    document.getElementById('eee').value = e;
+                    let y = document.getElementById('total').value = 200*a + 100*b + 50*c + 20*d + 10*e;
+                    document.getElementById('total-after').value = y;
+                }
+            
+                function myWithdrawal() {
+                    /* check if liczba */
+                    let z = 0;
+                    let a = document.getElementById('a').value;
+                    let b = document.getElementById('b').value;
+                    let c = document.getElementById('c').value;
+                    let d = document.getElementById('d').value;
+                    let e = document.getElementById('e').value;
+                    let x = document.getElementById('withdrawal').value;
+                    let y = document.getElementById('total').value;
+            
+                    let aa = document.getElementById('aa').value;
+                    let bb = document.getElementById('bb').value;
+                    let cc = document.getElementById('cc').value;
+                    let dd = document.getElementById('dd').value;
+                    let ee = document.getElementById('ee').value;
+            
+                    if (x % 10 == 0) {
+                        if (y-x>=0) {
+                            if ((x >= 200) && (a >= 1)) {
+                                do {
+                                    aa++;
+                                    a--;
+                                    document.getElementById('aa').value = aa;
+                                    document.getElementById('a').value = a;
+                                    x = x - 200;
+                                    z = z + 200;
+                                    
+                                    document.getElementById('total').value = 200*a + 100*b + 50*c + 20*d + 10*e;
+                                    console.log(a);
+                                } while ((x >= 200) && (a > 0));
+                            }
+                            
+                            if ((x / 100) >= 1 && b > 0) {
+                                do {
+                                    bb++;
+                                    b--;
+                                    document.getElementById('bb').value = bb;
+                                    document.getElementById('b').value = b;
+                                    x = x - 100;
+                                    z = z + 100;
+                                    document.getElementById('total').value = 200*a + 100*b + 50*c + 20*d + 10*e;
+                                } while ((x / 100) >= 1 && b > 0);
+                            }
+            
+                            if ((x / 50) >= 1 && c > 0) {
+                                do {
+                                    cc++;
+                                    c--;
+                                    document.getElementById('cc').value = cc;
+                                    document.getElementById('c').value = c;
+                                    x = x - 50;
+                                    z = z + 50;
+                                    document.getElementById('total').value = 200*a + 100*b + 50*c + 20*d + 10*e;
+                                } while ((x / 50) >= 1 && c > 0);
+                            }
+            
+                            if ((x / 20) >= 1 && d > 0) {
+                                do {
+                                    dd++;
+                                    d--;
+                                    document.getElementById('dd').value = dd;
+                                    document.getElementById('d').value = d;
+                                    x = x - 20;
+                                    z = z + 20;
+                                    document.getElementById('total').value = 200*a + 100*b + 50*c + 20*d + 10*e;
+                                } while ((x / 20) >= 1 && d > 0);
+                            }
+            
+                            if ((x / 10) >= 1 && e > 0) {
+                                do {
+                                    ee++;
+                                    e--;
+                                    document.getElementById('ee').value = ee;
+                                    document.getElementById('e').value = e;
+                                    x = x - 10;
+                                    z = z + 10;
+                                    document.getElementById('total').value = 200*a + 100*b + 50*c + 20*d + 10*e;
+                                } while ((x / 10) >= 1 && e > 0);
+                            }
+            
+                            if (x === 0) {
+                                alert('wypłacono: ' +z);
+                            }
+                        }
+                        else {
+                            alert('za mało hajsu w maszynie');
+                        }
+                    }
+                    else {
+                        alert("Tylko banknoty!");
+                    }
+                }
+            ;
+
+            function bank_clear() {
+                document.getElementById('a').value = null;
+                document.getElementById('b').value = null;
+                document.getElementById('c').value = null;
+                document.getElementById('d').value = null;
+                document.getElementById('e').value = null;
+                document.getElementById('total').value = null;
+
+                document.getElementById('withdrawal').value = null;
+
+                document.getElementById('aa').value = null;
+                document.getElementById('bb').value = null;
+                document.getElementById('cc').value = null;
+                document.getElementById('dd').value = null;
+                document.getElementById('ee').value = null;
+
+                document.getElementById('aaa').value = null;
+                document.getElementById('bbb').value = null;
+                document.getElementById('ccc').value = null;
+                document.getElementById('ddd').value = null;
+                document.getElementById('eee').value = null;
+                document.getElementById('total-after').value = null;
+            }
+            </script>
+          </div>
+    <script>
+    document.getElementById("defaultOpen").click();
+
+    function show_selected(){
+    let v = document.getElementById("wartoscvat");
+    let va = v.options[v.selectedIndex].value;
+    console.log(va);
+    }
+
+    document.getElementById('btn-vat').addEventListener('click', show_selected);
+    </script>
+</body>
+</html>

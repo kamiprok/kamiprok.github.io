@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kamiprok</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/icon.ico" />
+<link rel="icon" href="img/icon.png" type="image/png"/>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="myScript.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header" id="home">
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <div class='dropdown'>Zadania
+                    <div class='dropdown-content'>
+                        <a href='delta/kwadratowe.html'>Delta</a>
+                        <a href='zadanie-xml/zadanko.xml'>.xml</a>
+                    </div></div>
+                <a href="index.html" style="width:300px" id='logo'>
+                    <h1>kamiprok</h1>
+                </a>
+                <a onclick="document.getElementById('przycisk').click()" >kalkulator</a>
+                <a href="https://google.com/">Google</a>
+            </div>
+
+            <div id="empty1"></div>
+
+            <div class="main">
+                <h3>Witaj na mojej stronie!</h3>
+                <h4>Strona powstała na potrzeby wykonywania projektów z .js, algorytmów, itp.</h4>
+                <a href="#page1" class="button1" id="button1">Zapraszam</a>
+            </div>
+    </div>
+
+    <div class="kalk">
+            <h6>Kalkulator</h6>
+            <div class="calc">
+              <div>
+                <textarea class="#input" value="" rows="1" cols="10"></textarea>
+              </div>
+              <div>
+                <button value="7" id="7">7</button>
+                <button value="8" id="8">8</button>
+                <button value="9" id="9">9</button>
+                <button value="+" id="dodaj">+</button>
+              </div>
+              <div>
+                <button value="4" id="4">4</button>
+                <button value="5" id="5">5</button>
+                <button value="6" id="6">6</button>
+                <button value="-" id="odejmij">-</button>
+    
+              </div>
+              <div>
+                <button value="1" id="1">1</button>
+                <button value="2" id="2">2</button>
+                <button value="3" id="3">3</button>
+                <button value="*" id="mnoz">x</button>
+              </div>
+              <div>
+                <button value="0" id="zero">0</button>
+                <button value="." id="kropka">.</button>
+                <button value="/" id="dziel">/</button>
+              </div>
+              <div>
+                <button value="=" id="wynik">WYNIK</button>
+                <button value="" id="usun">E</button>
+                <button value="" id="kasuj">C</button>  
+              </div>
+            </div>
+          </div>
+
+    <div id="przycisk" class="przycisk" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <div class="page" id="page1">
+        <h5>O mnie</h5>
+        <div id="portret">
+            <img src="img/portrait.jpg" id="zdjecie"><br>
+            <div id="opis">
+                <p>"Geniusz!"</p>
+                <p>           - Wszyscy</p>
+                <p>Tekst może być też z boku czy coś</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gold">
+        <p>placeholder na cos</p>
+    </div>
+
+    <div class="prefooter">
+        <div class='disclamer'>
+            <h4>Fair Use Act Disclamer</h4>
+            <h4 style="font-size:18px">This site is for educational purposes only!!</h4>
+            <h1 style="font-size:16px">**FAIR USE**</h1>
+            <p>Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.
+            Fair use is a use permitted by copyright statute that might otherwise be infringing. 
+            Non-profit, educational or personal use tips the balance in favor of fair use.</p>
+
+            <p>FAIR USE DEFINITION:</p>
+            <a href='http://en.wikipedia.org/wiki/Fair_use' id='link1'><h2>http://en.wikipedia.org/wiki/Fair_use</h2></a>
+            <a href='http://www.copyright.gov/fls/fl102.html' id='link1'><h2>http://www.copyright.gov/fls/fl102.html</h2></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h4>Kamil Prokopiuk</h4>
+        <p>© Copyright 2018</p>
+        <p>All rights reserved. Powered by <font style="color:#daa54e">kamiprok</style></font>.</p>
+    </div>
+
+    <div class="navbar2" id='navbar2'>
+            <a href="javascript:void(0);" id='toIndex2'>Home</a>
+            <div class='dropdown2'>Zadania
+                <div class='dropdown-content2'>
+                    <a href='kwadratowe.html'>Delta</a>
+                    <a onclick="document.getElementById('przycisk').click()" id='kalk1'>kalkulator</a>
+                </div></div>
+            <a href="index.html" style="width:300px"  id='logo'>
+                <h1>kamiprok</h1>
+            </a>
+            <a onclick="document.getElementById('przycisk').click()" id='kalk1'>kalkulator</a>
+            <a href="https://google.com/">Google</a>
+        </div>
+
+</body>
+</html>
