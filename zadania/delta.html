@@ -90,12 +90,19 @@
                             document.getElementById('nh').value = null;
                         }
                         else {
-                            for (ih=1; ih<=nh; ih++) {
-                                yh = 1 / ih;
-                                xh = xh + yh;
-                                document.getElementById('xh').value = xh;
-                                document.getElementById('harm').style.display = 'block';
-                            } 
+                            if (nh > 0 && nh < 100000){
+                                for (ih=1; ih<=nh; ih++) {
+                                    yh = 1 / ih;
+                                    xh = xh + yh;
+                                    document.getElementById('xh').value = xh.toFixed(4);
+                                    document.getElementById('harm').style.display = 'block';
+                                }
+                            }
+                            else {
+                                alert('Liczba musi być z przedziału 1 - 99999');
+                                document.getElementById('nh').value = null;
+                                harmoniczny_clear();
+                            }
                         }
                         
                     }
@@ -285,7 +292,7 @@
                             }
                         }
                         else {
-                            alert('za mało hajsu w maszynie');
+                            alert('Za mało hajsu w maszynie!');
                         }
                     }
                     else {
