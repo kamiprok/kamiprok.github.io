@@ -16,23 +16,19 @@
     <div class="header" id="home">
             <div class="navbar">
                 <a href="index.html">Home</a>
-                <div class='dropdown'>Zadania
-                    <div class='dropdown-content'>
-                        <a href='delta/kwadratowe.html'>Delta</a>
-                        <a href='zadanie-xml/zadanko.xml'>.xml</a>
-                    </div></div>
+                <a id='button11'>O Mnie</a>
                 <a href="index.html" style="width:300px" id='logo'>
                     <h1>kamiprok</h1>
                 </a>
-                <a onclick="document.getElementById('przycisk').click()" >kalkulator</a>
-                <a href="https://google.com/">Google</a>
+                <a id='button22'>Technologie</a>
+                <a id='button33'>Zadania</a>
             </div>
 
             <div id="empty1"></div>
 
             <div class="main">
                 <h3>Witaj na mojej stronie!</h3>
-                <h4>Strona powstała na potrzeby wykonywania projektów z .js, algorytmów, itp.</h4>
+                <h4>Strona powstała na potrzeby wykonywania projektów z .js, algorytmów, itp.</h4><br><br><br><br><br><br>
                 <a href="#page1" class="button1" id="button1">Zapraszam</a>
             </div>
     </div>
@@ -84,53 +80,57 @@
     <div class="page" id="page1">
         <h5>O mnie</h5>
         <div id="portret">
-            <img src="img/portrait.jpg" id="zdjecie"><br>
-            <div id="opis">
-                <p>"Geniusz!"</p>
-                <p>           - Wszyscy</p>
-                <p>Tekst może być też z boku czy coś</p>
-            </div>
+            <img src="img/portrait.jpg" id="zdjecie">
+            <p>Witaj na mojej stronie!</p>
+            <p>Jestem studentem 2 roku Informatyki w Społecznej Akademii Nauk w Warszawie. Moją pasją jest JavaScript oraz Python.
+                W wolnych chwilach podróżuję po Europie.
+            </p>
         </div>
-
+        <a href="#gold1" class="button1" id="button2">DALEJ</a>
     </div>
 
-    <div class="gold">
-        <p>placeholder na cos</p>
+    <div class="gold" id='gold1'>
+        <h5>Technologie</h5>
+        <p>Technologie z których korzystam:</p>
+        <div class='tech'>
+            <a href='https://www.javascript.com/'><div class='tech-item'><img src='img/js.png' class='tech-img'><p>JavaScript</p></div></a>
+            <a href='https://www.python.org/'><div class='tech-item'><img src='img/python.png' class='tech-img'><p>Python</p></div></a>
+            <a href='https://code.visualstudio.com/'><div class='tech-item'><img src='img/vscode.png' class='tech-img'><p>VS Code</p></div></a>
+            <a href='https://www.jetbrains.com/pycharm/'><div class='tech-item'><img src='img/pycharm.png' class='tech-img'><p>PyCharm</p></div></a>
+            <a href='https://github.com/'><div class='tech-item'><img src='img/github.png' class='tech-img'><p>GitHub</p></div></a>
+            <a href='https://stackoverflow.com/'><div class='tech-item'><img src='img/stack.png' class='tech-img'><p>Stack Overflow</p></div></a>
+            <a href='https://www.udemy.com/'><div class='tech-item'><img src='img/udemy.png' class='tech-img'><p>Udemy</p></div></a>
+            <a href='https://www.w3schools.com/'><div class='tech-item'><img src='img/w3s.png' class='tech-img'><p>W3Schools</p></div></a>
+        </div>
+        <a href="#prefooter1" class="button1" id="button3">DALEJ</a></div>
     </div>
 
-    <div class="prefooter">
-        <div class='disclamer'>
-            <h4>Fair Use Act Disclamer</h4>
-            <h4 style="font-size:18px">This site is for educational purposes only!!</h4>
-            <h1 style="font-size:16px">**FAIR USE**</h1>
-            <p>Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.
-            Fair use is a use permitted by copyright statute that might otherwise be infringing. 
-            Non-profit, educational or personal use tips the balance in favor of fair use.</p>
-
-            <p>FAIR USE DEFINITION:</p>
-            <a href='http://en.wikipedia.org/wiki/Fair_use' id='link1'><h2>http://en.wikipedia.org/wiki/Fair_use</h2></a>
-            <a href='http://www.copyright.gov/fls/fl102.html' id='link1'><h2>http://www.copyright.gov/fls/fl102.html</h2></a>
-        </div>
+    <div class="prefooter" id='prefooter1'>
+        <h5>Zadania</h5>
+        <h4>Zadania algorytmy</h4>
+        <a href='zadania/delta.html' class='button-zadania'>Delta</a>
+        <h4>Zadania technologie internetowe</h4>
+        <a href='zadania/zadanie-xml/zadanie.xml' class='button-zadania'>XML</a>
+        <h4>Mój GitHub</h4>
+        <a href='https://github.com/kamiprok' class='button-zadania'>GitHub</a>
+        <h4></h4>
+        <a href="#home" class="button1" id="button4">POWRÓT</a></div>
     </div>
 
     <div class="footer">
-        <h4>Kamil Prokopiuk</h4>
-        <p>© Copyright 2018</p>
-        <p>All rights reserved. Powered by <font style="color:#daa54e">kamiprok</style></font>.</p>
+        <p style="font-size:12px">Kamil Prokopiuk</p>
+        <p style="font-size:12px">© Copyright 2018</p>
+        <p style="font-size:12px">All rights reserved. Powered by <font style="color:#daa54e">kamiprok</style></font>.</p>
     </div>
 
     <div class="navbar2" id='navbar2'>
-            <a href="javascript:void(0);" id='toIndex2'>Home</a>
-            <div class='dropdown2'>Zadania
-                <div class='dropdown-content2'>
-                    <a href='kwadratowe.html'>Delta</a>
-                    <a onclick="document.getElementById('przycisk').click()" id='kalk1'>kalkulator</a>
-                </div></div>
+            <a href="#home" id='button111'>Home</a>
+            <a href='#page1' id='button222'>O Mnie</a>
             <a href="index.html" style="width:300px"  id='logo'>
                 <h1>kamiprok</h1>
             </a>
-            <a onclick="document.getElementById('przycisk').click()" id='kalk1'>kalkulator</a>
-            <a href="https://google.com/">Google</a>
+            <a href='#gold1' id='button333'>Technologie</a>
+            <a href='#prefooter1' id='button444'>Zadania</a>
         </div>
 
 </body>

@@ -6,9 +6,72 @@ $(document).ready(function() {
 })});
 
 $(document).ready(function() {
-    $("#toIndex2,#kalk1").click(function(){
+    $("#button11").click(function() {
         $('html, body').animate({
-            scrollTop: 0
+            scrollTop: $("#page1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button111").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#home").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button222").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#page1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button333").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#gold1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button444").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#prefooter1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button2").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#gold1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button22").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#gold1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button3").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#prefooter1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button33").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#prefooter1").offset().top
+        }, 400);
+})});
+
+$(document).ready(function() {
+    $("#button4").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#home").offset().top
         }, 400);
 })});
 
