@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kamiprok</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/icon.ico" />
+<link rel="icon" href="img/icon.png" type="image/png"/>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="myScript.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header" id="home">
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a id='button11'>O Mnie</a>
+                <a href="index.html" style="width:300px" id='logo'>
+                    <h1>kamiprok</h1>
+                </a>
+                <a id='button22'>Technologie</a>
+                <a id='button33'>Zadania</a>
+            </div>
+
+            <div id="empty1"></div>
+
+            <div class="main">
+                <h3>Witaj na mojej stronie!</h3>
+                <h4>Strona powstała na potrzeby wykonywania projektów z .js, algorytmów, itp.</h4><br><br><br><br><br><br>
+                <a href="#page1" class="button1" id="button1">Zapraszam</a>
+            </div>
+    </div>
+
+    <div class="kalk">
+            <h6>Kalkulator</h6>
+            <div class="calc">
+              <div>
+                <textarea class="#input" value="" rows="1" cols="10"></textarea>
+              </div>
+              <div>
+                <button value="7" id="7">7</button>
+                <button value="8" id="8">8</button>
+                <button value="9" id="9">9</button>
+                <button value="+" id="dodaj">+</button>
+              </div>
+              <div>
+                <button value="4" id="4">4</button>
+                <button value="5" id="5">5</button>
+                <button value="6" id="6">6</button>
+                <button value="-" id="odejmij">-</button>
+    
+              </div>
+              <div>
+                <button value="1" id="1">1</button>
+                <button value="2" id="2">2</button>
+                <button value="3" id="3">3</button>
+                <button value="*" id="mnoz">x</button>
+              </div>
+              <div>
+                <button value="0" id="zero">0</button>
+                <button value="." id="kropka">.</button>
+                <button value="/" id="dziel">/</button>
+              </div>
+              <div>
+                <button value="=" id="wynik">WYNIK</button>
+                <button value="" id="usun">E</button>
+                <button value="" id="kasuj">C</button>  
+              </div>
+            </div>
+          </div>
+
+    <div id="przycisk" class="przycisk" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <div class="page" id="page1">
+        <h5>O mnie</h5>
+        <div id="portret">
+            <img src="img/portrait.jpg" id="zdjecie">
+            <p>Witaj na mojej stronie!</p>
+            <p>Jestem studentem 2 roku Informatyki w Społecznej Akademii Nauk w Warszawie. Moją pasją jest JavaScript oraz Python.
+                W wolnych chwilach podróżuję po Europie.
+            </p>
+        </div>
+        <a href="#gold1" class="button1" id="button2">DALEJ</a>
+    </div>
+
+    <div class="gold" id='gold1'>
+        <h5>Technologie</h5>
+        <p>Technologie z których korzystam:</p>
+        <div class='tech'>
+            <a href='https://www.javascript.com/'><div class='tech-item'><img src='img/js.png' class='tech-img'><p>JavaScript</p></div></a>
+            <a href='https://www.python.org/'><div class='tech-item'><img src='img/python.png' class='tech-img'><p>Python</p></div></a>
+            <a href='https://code.visualstudio.com/'><div class='tech-item'><img src='img/vscode.png' class='tech-img'><p>VS Code</p></div></a>
+            <a href='https://www.jetbrains.com/pycharm/'><div class='tech-item'><img src='img/pycharm.png' class='tech-img'><p>PyCharm</p></div></a>
+            <a href='https://github.com/'><div class='tech-item'><img src='img/github.png' class='tech-img'><p>GitHub</p></div></a>
+            <a href='https://stackoverflow.com/'><div class='tech-item'><img src='img/stack.png' class='tech-img'><p>Stack Overflow</p></div></a>
+            <a href='https://www.udemy.com/'><div class='tech-item'><img src='img/udemy.png' class='tech-img'><p>Udemy</p></div></a>
+            <a href='https://www.w3schools.com/'><div class='tech-item'><img src='img/w3s.png' class='tech-img'><p>W3Schools</p></div></a>
+        </div>
+        <a href="#prefooter1" class="button1" id="button3">DALEJ</a></div>
+    </div>
+
+    <div class="prefooter" id='prefooter1'>
+        <h5>Zadania</h5>
+        <h4>Zadania algorytmy</h4>
+        <a href='zadania/delta.html' class='button-zadania'>Delta</a>
+        <h4>Zadania technologie internetowe</h4>
+        <a href='zadania/zadanie-xml/zadanie.xml' class='button-zadania'>XML</a>
+        <h4>Mój GitHub</h4>
+        <a href='https://github.com/kamiprok' class='button-zadania'>GitHub</a>
+        <h4></h4>
+        <a href="#home" class="button1" id="button4">POWRÓT</a></div>
+    </div>
+
+    <div class="footer">
+        <p style="font-size:12px">Kamil Prokopiuk</p>
+        <p style="font-size:12px">© Copyright 2018</p>
+        <p style="font-size:12px">All rights reserved. Powered by <font style="color:#daa54e">kamiprok</style></font>.</p>
+    </div>
+
+    <div class="navbar2" id='navbar2'>
+            <a href="#home" id='button111'>Home</a>
+            <a href='#page1' id='button222'>O Mnie</a>
+            <a href="index.html" style="width:300px"  id='logo'>
+                <h1>kamiprok</h1>
+            </a>
+            <a href='#gold1' id='button333'>Technologie</a>
+            <a href='#prefooter1' id='button444'>Zadania</a>
+        </div>
+
+</body>
+</html>

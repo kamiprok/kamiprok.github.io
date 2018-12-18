@@ -1,0 +1,548 @@
+body {
+    background-color: #131313;
+    color: #fff;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.005);
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.header {
+    background-color: rgba(19, 19, 19, .51);
+    width: 100%;
+    height: 100%;
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.navbar {
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    vertical-align: middle;
+    position: absolute;
+    top: 20px;   
+}
+
+.navbar a, .dropdown, .dropdown-content {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: #ffffffb3;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: 150px;
+    line-height: 50px;
+}
+
+.navbar a:hover, .dropdown:hover, .dropdown-content:hover {
+    cursor: pointer;
+    color: #fff;
+    transition-duration: 400ms;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #131313;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.05);
+    z-index: 10002;
+    top: auto;
+    left: auto;
+    margin: 0 auto;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #ffffffb3;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    color: #fff;
+    transition-duration: 400ms;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #daa54e;
+    font-size: 36px;
+    letter-spacing: 2px;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    text-transform: lowercase;
+    color: #daa54e;
+    font-size: 12px;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#empty1 {
+    width: 100%;
+    height: 300px;
+}
+
+.main {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+h3 {
+    letter-spacing: 1.1px;
+    text-align: center;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 25px;
+}
+
+.button1 {
+    text-decoration: none;
+    display: inline-block;
+    width: 220px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-color: #fff;
+    color: #1b1b1b;
+    border-radius: 300px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#button1, #button2, #button3 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#button4 {
+    position: absolute;
+    top: 88.8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#button1:hover, #button2:hover, #button3:hover, #button4:hover {
+    background-color: #d3d3d3;
+}
+
+.page {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+h5 {
+    font-weight: 800;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin: 40px;
+    margin-top: 80px;
+}
+
+h6 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1b1b1b;
+    margin: 20px;
+}
+
+.gold {
+    position: absolute;
+    top: 200%;
+    left: 0;
+    background-color: #daa54e;
+    color: rgba(0,0,0,.75);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.prefooter {
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 300%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 90%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.disclamer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10%;
+    bottom: 10%;
+    margin: auto;
+    max-width: 90%;
+    border: 1px solid white;
+}
+
+#link1 {
+    text-decoration: none;
+}
+
+.footer {
+    position: absolute;
+    top: 390%;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+    .kalk {
+        position:absolute;
+        height:auto;
+        width:auto;
+        top:150px;
+        left:0px;
+        margin-left: -314px;
+        z-index: top;
+        background-color: #f9f9f9;
+        padding: 25px;
+        box-shadow: 2px 2px 5px gray;
+        text-align: center;
+    }
+    
+    .kalk button {
+        background-color: #e6e6e0;
+        font-size: 36px;
+        border: none;
+        height: 50px;
+        width: 50px;
+        margin: 6px; 
+        box-shadow: 2px 2px 5px gray;
+        transition: 0.2s;
+    }
+
+    #dodaj,#odejmij,#mnoz,#dziel,#kropka {
+        background-color: #e0e6e6;
+    }
+
+    #usun, #kasuj {
+    background-color: #eae6e7;
+    }
+
+    #zero {
+        background-color: #e6e7ea;
+        font-size: 36px;
+        border: none;
+        height: 50px;
+        width: 118px;
+        margin: 6px; 
+        box-shadow: 2px 2px 5px gray;
+        transition: 0.2s;
+    }
+    
+    #wynik {
+        background-color: #e4e5f5;
+        font-size: 30px;
+        border: none;
+        height: 50px;
+        width: 118px;
+        margin: 6px; 
+        box-shadow: 2px 2px 5px gray;
+        transition: 0.2s;
+    }
+    
+    .kalk button:hover, #wynik:hover, #dodaj:hover,#odejmij:hover,#mnoz:hover,#dziel:hover,#kropka:hover,#zero:hover,#usun:hover, #kasuj:hover {
+        cursor: pointer;
+        background-color: #daa54e;
+    }
+
+    .kalk button:active, #wynik:active, #dodaj:active,#odejmij:active,#mnoz:active,#dziel:active,#kropka:active,#zero:active,#usun:active, #kasuj:active {
+        background: #131313;
+        color: #daa54e;
+        transition: 0.0s;
+    }
+    
+    .kalk button:focus {
+        outline: none;
+    }
+    
+    .kalk textarea {
+        margin: 0px auto;
+        font-size: 36px;
+        width: 255px;
+        border: none;
+        text-align: right;
+    }
+
+
+#przycisk {
+    position:absolute;
+    display: inline-block;
+    width:63px;
+    height:63px;
+    left:0px;
+    background:#1b1b1b;
+    top: 150px;
+    z-index: top;
+}
+
+#przycisk:hover {
+    background: #f9f9f9;
+}
+
+#przycisk:hover .bar1, #przycisk:hover .bar2, #przycisk:hover .bar3 {
+    background: black;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 50px;
+    height: 5px;
+    background-color: #f9f9f9;
+    margin: 12px 6px;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-12px, 12px);
+    transform: rotate(-45deg) translate(-12px, 12px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-12px, -12px);
+    transform: rotate(45deg) translate(-12px, -12px);
+}
+
+#portret {
+    position: absolute;
+    display: block;
+    background-color: #333333;
+    margin: auto;
+    height: 450px;
+    width: 50%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+
+#zdjecie {
+    float: left;
+    display: block;
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 400px;
+    padding: 20px;
+}
+
+#portret:hover {
+    box-shadow: 0 0 8px 4px rgb(218, 165, 78, 0.2), 0 0 20px 10px rgb(218, 165, 78, 0.3);
+}
+
+h1:hover {
+    color:rgb(255, 201, 53);
+    transition: 500ms;
+    text-shadow: 1px 2px 20px rgb(19, 19, 19, 0.2);
+}
+
+.navbar2 {
+    text-align: center;
+    background-color: #111;
+    opacity: 0.95;
+    width: 100%;
+    vertical-align: middle;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -200px;
+    transition: top 0.3s;
+}
+
+.navbar2 a, .dropdown2, .dropdown-content2 {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: #ffffffb3;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    width: 150px;
+    line-height: 50px;
+}
+
+.navbar2 a:hover, .dropdown2:hover, .dropdown-content2:hover {
+    cursor: pointer;
+    color: #fff;
+    transition-duration: 400ms;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #131313;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.05);
+    z-index: 10002;
+    top: auto;
+    left: auto;
+    margin: 0 auto;
+}
+
+.dropdown-content2 a {
+    float: none;
+    color: #ffffffb3;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content2 a:hover {
+    color: #fff;
+    transition-duration: 400ms;
+}
+
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+ /* kalk-stary */
+
+    .kalkulator {
+        background-color: #f9f9f9;
+        width: 800px;
+        height: 500px;
+    }
+
+    table {
+        text-align: center;
+    }
+    
+    .komorka {
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .pole {
+        display: inline-block;
+        text-align: right;
+        width: 530px;
+        height: 50px;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+.button-zadania {
+    display: inline-block;
+    color: #daa54e;
+    text-decoration: none;
+    font-size:20px; 
+    font-family:Helvetica;
+    padding:20px;
+    background-color: #1f1f1f;
+    text-transform: uppercase;
+    border: 2px solid #daa54e;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.button-zadania:hover {
+    color: #1f1f1f;
+    background-color: #daa54e;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.tech {
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-auto-rows: 200px;
+    grid-gap: 50px;
+    padding: 10px;
+    width: 1000px;
+    margin: auto;
+    left: 0;
+}
+
+.tech-item {
+    justify-content: center;
+    justify-self: center;
+    display: inline-grid;
+    padding: 10px;
+    color: #131313;
+    max-width: 200px;
+    max-height: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.tech-item:hover {
+    transition: 0.2s;
+    color: #daa54e;
+    background-color: #333333;
+}
+.tech-img {
+    left: 0;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+}
+
+.tech a {
+    text-decoration: none;
+}
+
+/* end */
