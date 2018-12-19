@@ -24,6 +24,6 @@ exit;
 </head>
 <body>
 <p>Elegancko, jesteś zalogowany.</p>
-<p>Ta strona <<< index2.php >>> jest dostępna tylko dla zalogowanych użytkowników. Kliknij <a href="logout.php" class='button-zadania'>Wyloguj</a> żeby się wylogować.
+<p>Ta strona <p1><<<</p1> index2.php <p1>>>></p1> jest dostępna tylko dla zalogowanych użytkowników. Kliknij <a href="logout.php" class='button-zadania'>Wyloguj</a> żeby się wylogować.
 </body>
 </html>

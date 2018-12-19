@@ -8,7 +8,7 @@ $_SESSION['UserData']['Username']=$logins[$Username];
 header("location:index2.php");
 exit;
 } else {
-$msg="<span style='color:red'>Login: admin   Hasło: admin</span>";
+$msg="<p style='color:red'>Login: admin &emsp; Hasło: admin</p>";
 }
 }
 ?>
