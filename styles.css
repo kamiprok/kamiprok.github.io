@@ -18,7 +18,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    
 }
 
 .navbar {
@@ -30,9 +29,16 @@ body {
     top: 20px;   
 }
 
-.navbar a, .dropdown, .dropdown-content {
+.navbar a, .navbar .button-menu {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.005);
+    -webkit-font-smoothing: subpixel-antialiased;
     display: inline-block;
     text-align: center;
+    background-color: transparent;
+    background: none;
+    border: none;
+    outline: none;
     margin: auto;
     text-decoration: none;
     color: #ffffffb3;
@@ -44,39 +50,10 @@ body {
     line-height: 50px;
 }
 
-.navbar a:hover, .dropdown:hover, .dropdown-content:hover {
+.navbar a:hover, .navbar .button-menu:hover {
     cursor: pointer;
     color: #fff;
     transition-duration: 400ms;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #131313;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.05);
-    z-index: 10002;
-    top: auto;
-    left: auto;
-    margin: 0 auto;
-}
-
-.dropdown-content a {
-    float: none;
-    color: #ffffffb3;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-
-.dropdown-content a:hover {
-    color: #fff;
-    transition-duration: 400ms;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 h1 {
@@ -130,7 +107,13 @@ h4 {
 }
 
 .button1 {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.005);
+    -webkit-font-smoothing: subpixel-antialiased;
     text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
     display: inline-block;
     width: 220px;
     line-height: 40px;
@@ -403,53 +386,30 @@ h1:hover {
     transition: top 0.3s;
 }
 
-.navbar2 a, .dropdown2, .dropdown-content2 {
+.navbar2 a, .navbar2 .button-top {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.005);
+    -webkit-font-smoothing: subpixel-antialiased;
     display: inline-block;
+    background: none;
+    border: none;
+    outline: none;
     text-align: center;
-    margin: auto;
     text-decoration: none;
+    margin: auto;
     color: #ffffffb3;
     font-size: 16px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 2px;
     width: 150px;
     line-height: 50px;
 }
 
-.navbar2 a:hover, .dropdown2:hover, .dropdown-content2:hover {
+.navbar2 a:hover, .navbar2 .button-top:hover {
     cursor: pointer;
     color: #fff;
     transition-duration: 400ms;
-}
-
-.dropdown-content2 {
-    display: none;
-    position: absolute;
-    background-color: #131313;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.05);
-    z-index: 10002;
-    top: auto;
-    left: auto;
-    margin: 0 auto;
-}
-
-.dropdown-content2 a {
-    float: none;
-    color: #ffffffb3;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-
-.dropdown-content2 a:hover {
-    color: #fff;
-    transition-duration: 400ms;
-}
-
-.dropdown2:hover .dropdown-content2 {
-    display: block;
 }
 
  /* kalk-stary */

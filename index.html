@@ -16,20 +16,20 @@
     <div class="header" id="home">
             <div class="navbar">
                 <a href="index.html">Home</a>
-                <a id='button11'>O Mnie</a>
+                <button class='button-menu' onclick='button11()'>O Mnie</button>
                 <a href="index.html" style="width:300px" id='logo'>
                     <h1>kamiprok</h1>
                 </a>
-                <a id='button22'>Technologie</a>
-                <a id='button33'>Zadania</a>
+                <button class='button-menu' onclick='button12()'>Technologie</button>
+                <button class='button-menu' onclick='button13()'>Zadania</button>
             </div>
 
             <div id="empty1"></div>
 
             <div class="main">
                 <h3>Witaj na mojej stronie!</h3>
-                <h4>Strona powstała na potrzeby wykonywania projektów z .js, algorytmów, itp.</h4><br><br><br><br><br><br>
-                <a href="#page1" class="button1" id="button1">Zapraszam</a>
+                <h4>Strona powstała na potrzeby wykonywania projektów z .js, algorytmów, itp.</h4>
+                <button class='button1' id='button1' onclick='button11()'>Zapraszam</button>
             </div>
     </div>
 
@@ -86,7 +86,7 @@
                 W wolnych chwilach podróżuję po Europie.
             </p>
         </div>
-        <a href="#gold1" class="button1" id="button2">DALEJ</a>
+        <button onclick="button12()" class="button1" id="button2">DALEJ</button>
     </div>
 
     <div class="gold" id='gold1'>
@@ -102,7 +102,7 @@
             <a href='https://www.udemy.com/'><div class='tech-item'><img src='img/udemy.png' class='tech-img'><p>Udemy</p></div></a>
             <a href='https://www.w3schools.com/'><div class='tech-item'><img src='img/w3s.png' class='tech-img'><p>W3Schools</p></div></a>
         </div>
-        <a href="#prefooter1" class="button1" id="button3">DALEJ</a></div>
+        <button onclick="button13()" class="button1" id="button3">DALEJ</button></div>
     </div>
 
     <div class="prefooter" id='prefooter1'>
@@ -116,7 +116,7 @@
         <h4>Mój GitHub</h4>
         <a href='https://github.com/kamiprok' class='button-zadania'>GitHub</a>
         <h4></h4>
-        <a href="#home" class="button1" id="button4">POWRÓT</a></div>
+        <button onclick="button14()" class="button1" id="button4">POWRÓT</button></div>
     </div>
 
     <div class="footer">
@@ -126,14 +126,14 @@
     </div>
 
     <div class="navbar2" id='navbar2'>
-            <a href="#home" id='button111'>Home</a>
-            <a href='#page1' id='button222'>O Mnie</a>
-            <a href="index.html" style="width:300px"  id='logo'>
-                <h1>kamiprok</h1>
-            </a>
-            <a href='#gold1' id='button333'>Technologie</a>
-            <a href='#prefooter1' id='button444'>Zadania</a>
-        </div>
+        <button class='button-top' onclick='button14()'>Home</button>
+        <button class='button-top' onclick='button11()'>O Mnie</button>
+        <a href="index.html" style="width:300px"  id='logo'>
+            <h1>kamiprok</h1>
+        </a>
+        <button class='button-top' onclick='button12()'>Technologie</button>
+        <button class='button-top' onclick='button13()'>Zadania</button>
+    </div>
 
 </body>
 </html>
