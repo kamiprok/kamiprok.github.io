@@ -1,25 +1,25 @@
 function button11() {
     $('html, body').animate({
         scrollTop: $("#page1").offset().top
-    }, 400);
+    }, 400, 'linear');
 };
 
 function button12() {
     $('html, body').animate({
         scrollTop: $("#gold1").offset().top
-    }, 400);
+    }, 400, 'linear');
 };
 
 function button13() {
     $('html, body').animate({
         scrollTop: $("#prefooter1").offset().top
-    }, 400);
+    }, 400, 'linear');
 };
 
 function button14() {
     $('html, body').animate({
         scrollTop: $("#home").offset().top
-    }, 400);
+    }, 400, 'linear');
 };
 
 $(document).ready(function(){
