@@ -8,7 +8,7 @@ $_SESSION['UserData']['Username']=$logins[$Username];
 header("location:index2.php");
 exit;
 } else {
-$msg="<p style='color:red'>Login: admin &emsp; Hasło: admin</p>";
+$msg="<p style='color:red; padding-left:500px'>Login: admin &emsp; Hasło: admin</p>";
 }
 }
 ?>
@@ -41,7 +41,7 @@ $msg="<p style='color:red'>Login: admin &emsp; Hasło: admin</p>";
         </div>
     </form>
     <?php if(isset($msg)){?>
-    <p style='margin-left:50px'><?php echo $msg;?></p>
+    <p><?php echo $msg;?></p>
     <?php } ?>
 </body>
 </html>
