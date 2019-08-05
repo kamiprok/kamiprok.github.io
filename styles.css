@@ -26,7 +26,7 @@ body {
     width: 100%;
     vertical-align: middle;
     position: absolute;
-    top: 20px;   
+    top: 2rem;   
 }
 
 .navbar a, .navbar .button-menu {
@@ -42,7 +42,7 @@ body {
     margin: auto;
     text-decoration: none;
     color: #ffffffb3;
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
@@ -75,8 +75,8 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     color: #daa54e;
-    font-size: 36px;
-    letter-spacing: 2px;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
     display: block;
     width: 300px;
     margin: 0 auto;
@@ -86,7 +86,7 @@ h2 {
     text-align: center;
     text-transform: lowercase;
     color: #daa54e;
-    font-size: 12px;
+    font-size: 1rem;
     display: block;
     margin: 0;
     padding: 0;
@@ -107,18 +107,18 @@ h2 {
 }
 
 h3 {
-    letter-spacing: 1.1px;
+    letter-spacing: 0.1rem;
     text-align: center;
     font-weight: 1000;
     text-transform: uppercase;
-    font-size: 72px;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
 h4 {
     text-align: center;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 2rem;
     margin: 25px;
 }
 
@@ -139,9 +139,9 @@ h4 {
     color: #1b1b1b;
     border-radius: 300px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 0.1rem;
 }
 
 #button1, #button2, #button3 {
@@ -177,7 +177,7 @@ h4 {
 
 h5 {
     font-weight: 800;
-    font-size: 48px;
+    font-size: 3rem;
     text-transform: uppercase;
     margin: 40px;
     margin-top: 80px;
@@ -186,7 +186,7 @@ h5 {
 h6 {
     text-align: center;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 2rem;
     color: #1b1b1b;
     margin: 20px;
 }
