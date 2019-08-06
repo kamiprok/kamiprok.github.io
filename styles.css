@@ -1,9 +1,21 @@
+html {
+    background-color: #131313;
+    color: #fff;
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.005);
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
 body {
     background-color: #131313;
     color: #fff;
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
     text-shadow: 1px 1px 1px rgba(0,0,0,.005);
     -webkit-font-smoothing: subpixel-antialiased;
+}
+
+p {
+    font-size: 1.75vw;
 }
 
 .header {
@@ -26,7 +38,7 @@ body {
     width: 100%;
     vertical-align: middle;
     position: absolute;
-    top: 2rem;   
+    top: 2rem;
 }
 
 .navbar a, .navbar .button-menu {
@@ -45,19 +57,15 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 2px;
-    width: 150px;
-    line-height: 50px;
+    letter-spacing: 0.1rem;
+    width: 10rem;
+    line-height: 3rem;
 }
 
 .navbar a:hover, .navbar .button-menu:hover {
     cursor: pointer;
     color: #fff;
     transition-duration: 400ms;
-}
-
-p1 {
-    color: red;
 }
 
 .video1 {
@@ -68,7 +76,7 @@ p1 {
     left: 0;
     overflow: hidden;
     z-index: -100;
-    z-index: -100;
+    width: 100%;
 }
 
 h1 {
@@ -78,8 +86,8 @@ h1 {
     font-size: 2rem;
     letter-spacing: 0.1rem;
     display: block;
-    width: 300px;
     margin: 0 auto;
+    width: 100%;
 }
 
 h2 {
@@ -111,15 +119,15 @@ h3 {
     text-align: center;
     font-weight: 1000;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 h4 {
     text-align: center;
     font-weight: bold;
-    font-size: 2rem;
-    margin: 25px;
+    font-size: 1.5rem;
+    margin: 10px;
 }
 
 .button1 {
@@ -142,6 +150,10 @@ h4 {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
+}
+
+#button1 {
+    background-color: #000;
 }
 
 #button1, #button2, #button3 {
@@ -175,6 +187,10 @@ h4 {
     text-align: center;
 }
 
+.page p {
+    font-size: 1.2rem;
+}
+
 h5 {
     font-weight: 800;
     font-size: 3rem;
@@ -186,7 +202,7 @@ h5 {
 h6 {
     text-align: center;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2vw;
     color: #1b1b1b;
     margin: 20px;
 }
@@ -238,130 +254,12 @@ h6 {
     text-align: center;
 }
 
-    .kalk {
-        position:absolute;
-        height:auto;
-        width:auto;
-        top:150px;
-        left:0px;
-        margin-left: -314px;
-        z-index: top;
-        background-color: #f9f9f9;
-        padding: 25px;
-        box-shadow: 2px 2px 5px gray;
-        text-align: center;
-    }
-    
-    .kalk button {
-        background-color: #e6e6e0;
-        font-size: 36px;
-        border: none;
-        height: 50px;
-        width: 50px;
-        margin: 6px; 
-        box-shadow: 2px 2px 5px gray;
-        transition: 0.2s;
-    }
-
-    #dodaj,#odejmij,#mnoz,#dziel,#kropka {
-        background-color: #e0e6e6;
-    }
-
-    #usun, #kasuj {
-    background-color: #eae6e7;
-    }
-
-    #zero {
-        background-color: #e6e7ea;
-        font-size: 36px;
-        border: none;
-        height: 50px;
-        width: 118px;
-        margin: 6px; 
-        box-shadow: 2px 2px 5px gray;
-        transition: 0.2s;
-    }
-    
-    #wynik {
-        background-color: #e4e5f5;
-        font-size: 30px;
-        border: none;
-        height: 50px;
-        width: 118px;
-        margin: 6px; 
-        box-shadow: 2px 2px 5px gray;
-        transition: 0.2s;
-    }
-    
-    .kalk button:hover, #wynik:hover, #dodaj:hover,#odejmij:hover,#mnoz:hover,#dziel:hover,#kropka:hover,#zero:hover,#usun:hover, #kasuj:hover {
-        cursor: pointer;
-        background-color: #daa54e;
-    }
-
-    .kalk button:active, #wynik:active, #dodaj:active,#odejmij:active,#mnoz:active,#dziel:active,#kropka:active,#zero:active,#usun:active, #kasuj:active {
-        background: #131313;
-        color: #daa54e;
-        transition: 0.0s;
-    }
-    
-    .kalk button:focus {
-        outline: none;
-    }
-    
-    .kalk textarea {
-        margin: 0px auto;
-        font-size: 36px;
-        width: 255px;
-        border: none;
-        text-align: right;
-    }
-
-
-#przycisk {
-    position:absolute;
-    display: inline-block;
-    width:63px;
-    height:63px;
-    left:0px;
-    background:#1b1b1b;
-    top: 150px;
-    z-index: top;
-}
-
-#przycisk:hover {
-    background: #f9f9f9;
-}
-
-#przycisk:hover .bar1, #przycisk:hover .bar2, #przycisk:hover .bar3 {
-    background: black;
-}
-
-.bar1, .bar2, .bar3 {
-    width: 50px;
-    height: 5px;
-    background-color: #f9f9f9;
-    margin: 12px 6px;
-    transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-12px, 12px);
-    transform: rotate(-45deg) translate(-12px, 12px);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-12px, -12px);
-    transform: rotate(45deg) translate(-12px, -12px);
-}
-
 #portret {
-    position: absolute;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: #333333;
     margin: auto;
-    height: 450px;
+    min-height: 400px;
     width: 50%;
     left: 0;
     right: 0;
@@ -369,13 +267,83 @@ h6 {
 }
 
 #zdjecie {
+    height: auto;
+    width: 100%;
+    max-width: 250px;
+    max-height: 350px;
+}
+
+.foto {
     float: left;
-    display: block;
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 400px;
-    padding: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.bio {
+    float: right;
+    padding: 10px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 980px){
+    #portret {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #333333;
+        margin: auto;
+        min-height: 400px;
+        width: 50%;
+        left: 0;
+        right: 0;
+        padding: 20px;
+    }
+
+    .header {
+        height: 100%;
+        position: relative;
+    }
+
+    #empty1 {
+        height: 200px;
+    }
+
+    #button1 {
+        border: 1px solid white;
+    }
+
+    .page {
+        height: 100%;
+        position: relative;
+    }
+
+    #portret {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .gold {
+        height: 100%;
+        position: relative;
+    }
+
+    .prefooter {
+        height: 100%;
+        position: relative;
+    }
+
+    .footer {
+        height: 100%;
+        position: relative;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+
+    #button2, #button3, #button4 {
+        display: none;
+    }
 }
 
 #portret:hover {
@@ -428,37 +396,6 @@ h1:hover {
     transition-duration: 400ms;
 }
 
- /* kalk-stary */
-
-    .kalkulator {
-        background-color: #f9f9f9;
-        width: 800px;
-        height: 500px;
-    }
-
-    table {
-        text-align: center;
-    }
-    
-    .komorka {
-        display: inline-block;
-        width: 100px;
-        height: 50px;
-        font-size: 15px;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    .pole {
-        display: inline-block;
-        text-align: right;
-        width: 530px;
-        height: 50px;
-        font-size: 25px;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
 .button-zadania {
     display: inline-block;
     color: #daa54e;
@@ -481,21 +418,12 @@ h1:hover {
 }
 
 .tech {
-    justify-content: center;
-    justify-items: center;
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-auto-rows: 200px;
-    grid-gap: 50px;
-    padding: 10px;
-    width: 1000px;
-    margin: auto;
-    left: 0;
+    grid-template-columns: repeat( auto-fill, minmax(200px, 1fr) );
+    margin: 20px;
 }
 
 .tech-item {
-    justify-content: center;
-    justify-self: center;
     display: inline-grid;
     padding: 10px;
     color: #131313;
@@ -510,6 +438,11 @@ h1:hover {
     color: #daa54e;
     background-color: #333333;
 }
+
+.tech-item p {
+    font-size: 1.5rem;
+}
+
 .tech-img {
     left: 0;
     margin: auto;
