@@ -344,7 +344,72 @@ h6 {
     #button2, #button3, #button4 {
         display: none;
     }
+
+    #logo {
+        display: none;
+    }
 }
+
+.hamburger {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 690px){
+    .navbar {
+        display: none;
+    }
+
+    .hamburger {
+        z-index: 1001;
+        position: absolute;
+        display: block;
+        right: 0;
+        background-color: #000;
+        border: none;
+        outline: none;
+        padding: 10px 30px;
+        margin: 30px;
+        cursor: pointer;
+        width: 180px;
+        text-align: center;
+    }
+
+    .hamburger ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hamburger li a {
+        display: block;
+        text-decoration: none;
+        color: #d3d3d3;
+        padding: 10px 0;
+        font-size: 2em;
+    }
+
+    .hamburger li a:hover {
+        background-color: #131313;
+        color: #daa54e;
+    }
+
+    .hamburger:hover .hamburger-menu{
+        display: block;
+    }
+
+    .hamburger:active .hamburger-menu{
+        display: block;
+    }
+
+    .hamburger:focus .hamburger-menu{
+        display: block;
+    }
+}
+
 
 #portret:hover {
     box-shadow: 0 0 8px 4px rgb(218, 165, 78, 0.2), 0 0 20px 10px rgb(218, 165, 78, 0.3);
