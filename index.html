@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kamiprok</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/icon.ico" />
+<link rel="icon" href="img/icon.png" type="image/png"/>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="myScript.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header" id="home">
+            <span class="hamburger"><h1>&#9776; Menu</h1>
+                <span class="hamburger-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#technology" >Technology</a></li>
+                        <li><a href="#portfolio" >Portfolio</a></li>
+                    </ul>
+                </span>
+            </span>
+            <video loop muted autoplay poster="img/Travaho.jpg" class="video1">
+                <source src="img/Travaho.webm" type="video/webm">
+            </video>
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <button class='button-menu' onclick='button11()'>About</button>
+                <a href="index.html" style="width:300px" id='logo'>
+                    <h1>kamiprok</h1>
+                </a>
+                <button class='button-menu' onclick='button12()'>Technology</button>
+                <button class='button-menu' onclick='button13()'>Portfolio</button>
+            </div>
+
+            <div id="empty1"></div>
+
+            <div class="main">
+                <h3>Welcome to my website!</h3>
+                <h4>This is my main site for school projects and testing stuff</h4>
+                <button class='button1 glow-on-hover' id="button1" onclick='button11()'>Read More</button>
+            </div>
+    </div>
+
+    <div class="page" id="page1">
+        <h5 id="about">About me</h5>
+        <div id="portret">
+            <section class="foto">
+              <img src="img/portrait.jpg" id="zdjecie">
+            </section>
+            <section class="bio">
+              <h4>Welcome!</h4>
+              <p>I'm a student of Academy of Social Sciences in Warsaw. Currently on 3rd year of my Bachelor's degree.</p>
+              <p>I'm mostly interested in HTML, CSS, JavaScript and Python.</p>
+            </section>
+        </div>
+        <button onclick="button12()" class="button1" id="button2">More</button>
+    </div>
+
+    <div class="gold" id='gold1'>
+        <h5 id="technology">Technology</h5>
+        <h4>Useful links:</h4>
+        <div class='tech'>
+            <a href='https://www.javascript.com/'><div class='tech-item'><img src='img/js.png' class='tech-img'><p>JavaScript</p></div></a>
+            <a href='https://www.python.org/'><div class='tech-item'><img src='img/python.png' class='tech-img'><p>Python</p></div></a>
+            <a href='https://code.visualstudio.com/'><div class='tech-item'><img src='img/vscode.png' class='tech-img'><p>VS Code</p></div></a>
+            <a href='https://www.jetbrains.com/pycharm/'><div class='tech-item'><img src='img/pycharm.png' class='tech-img'><p>PyCharm</p></div></a>
+            <a href='https://github.com/'><div class='tech-item'><img src='img/github.png' class='tech-img'><p>GitHub</p></div></a>
+            <a href='https://stackoverflow.com/'><div class='tech-item'><img src='img/stack.png' class='tech-img'><p>Stack Overflow</p></div></a>
+            <a href='https://www.udemy.com/'><div class='tech-item'><img src='img/udemy.png' class='tech-img'><p>Udemy</p></div></a>
+            <a href='https://www.w3schools.com/'><div class='tech-item'><img src='img/w3s.png' class='tech-img'><p>W3Schools</p></div></a>
+        </div>
+        <button onclick="button13()" class="button1" id="button3">More</button></div>
+    </div>
+
+    <div class="prefooter" id='prefooter1'>
+        <h5 id="portfolio">Portfolio</h5>
+        <h4>Zadania algorytmy</h4>
+        <a href='zadania/delta.html' class='button-zadania'>Delta</a>
+        <h4>Zadania technologie internetowe</h4>
+        <a href='zadania/zadanie-xml/zadanie.xml' class='button-zadania'>XML</a>
+        <a href='' class='button-zadania'>Logowanie</a>
+        <a href='' class='button-zadania'>Index2</a>
+        <h4>Mój GitHub</h4>
+        <a href='https://github.com/kamiprok' class='button-zadania'>GitHub</a>
+        <h4>Pizza Time</h4>
+        <a href='pizza.html' class='button-zadania'>Pizza</a>
+        <h4></h4>
+        <button onclick="button14()" class="button1" id="button4">Back</button></div>
+    </div>
+
+    <div class="footer">
+        <p style="font-size:12px">Kamil Prokopiuk © Copyright 2019</p>
+        <p style="font-size:12px">All rights reserved. Powered by <font style="color:#daa54e">kamiprok</style></font>.</p>
+    </div>
+
+    <div class="navbar2" id='navbar2'>
+        <button class='button-top' onclick='button14()'>Home</button>
+        <button class='button-top' onclick='button11()'>About me</button>
+        <a href="index.html" style="width:300px"  id='logo'>
+            <h1>kamiprok</h1>
+        </a>
+        <button class='button-top' onclick='button12()'>Technology</button>
+        <button class='button-top' onclick='button13()'>Portfolio</button>
+    </div>
+
+</body>
+</html>
