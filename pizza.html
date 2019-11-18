@@ -107,15 +107,15 @@
         document.getElementById("wyniki2").style.display = "block";
 
         if (cena1 > cena2) {
-            document.getElementById("tak1").style.display = "none";
-            document.getElementById("nie1").style.display = "block";
-            document.getElementById("tak2").style.display = "block";
-            document.getElementById("nie2").style.display = "none";
-        } else if (cena2 > cena1) {
             document.getElementById("tak1").style.display = "block";
             document.getElementById("nie1").style.display = "none";
             document.getElementById("tak2").style.display = "none";
             document.getElementById("nie2").style.display = "block";
+        } else if (cena2 > cena1) {
+            document.getElementById("tak1").style.display = "none";
+            document.getElementById("nie1").style.display = "block";
+            document.getElementById("tak2").style.display = "block";
+            document.getElementById("nie2").style.display = "none";
         } else if (cena1 == cena2) {
             document.getElementById("tak1").style.display = "block";
             document.getElementById("nie1").style.display = "none";
