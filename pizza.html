@@ -106,6 +106,9 @@
         document.getElementById("wyniki1").style.display = "block";
         document.getElementById("wyniki2").style.display = "block";
 
+        cena1 = parseFloat(cena1)
+        cena2 = parseFloat(cena2)
+
         if (cena1 > cena2) {
             document.getElementById("tak1").style.display = "block";
             document.getElementById("nie1").style.display = "none";
@@ -116,7 +119,7 @@
             document.getElementById("nie1").style.display = "block";
             document.getElementById("tak2").style.display = "block";
             document.getElementById("nie2").style.display = "none";
-        } else if (cena1 == cena2) {
+        } else {
             document.getElementById("tak1").style.display = "block";
             document.getElementById("nie1").style.display = "none";
             document.getElementById("tak2").style.display = "block";
