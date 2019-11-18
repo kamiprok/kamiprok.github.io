@@ -225,11 +225,7 @@ h6 {
     left: 0;
     right: 0;
     margin: auto;
-<<<<<<< HEAD
     height: 95%;
-=======
-    height: 90%;
->>>>>>> 631a8da6bab99cf394d33c595ba50cc23dd38edb
     max-width: 100%;
     text-align: center;
 }
@@ -251,11 +247,7 @@ h6 {
 
 .footer {
     position: absolute;
-<<<<<<< HEAD
     top: 395%;
-=======
-    top: 390%;
->>>>>>> 631a8da6bab99cf394d33c595ba50cc23dd38edb
     left: 0;
     height: 100px;
     width: 100%;
