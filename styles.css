@@ -530,16 +530,15 @@ h1:hover {
 
 .pizza {
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .pizza1 {
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
     float: left;
     width: 49%;
     border: 1px solid #daa54e;
@@ -547,31 +546,29 @@ h1:hover {
 
 .pizza2 {
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
     float: right;
     width: 49%;
     border: 1px solid #daa54e;
 }
 
 .przelicz {
+    background-color: #daa54e;
+    display: inline-block;
+    width: 100%;
     clear: both;
-    display: block;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background: #daa54e;
 }
 
 .wyniki {
     display: block;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .wyniki1 {
@@ -580,7 +577,7 @@ h1:hover {
     padding-bottom: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 150px;
+    height: 160px;
 }
 
 .wyniki2 {
@@ -589,7 +586,7 @@ h1:hover {
     padding-bottom: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 150px;
+    height: 160px;
 }
 
 #tak1 {
@@ -601,9 +598,9 @@ h1:hover {
 }
 
 .cos1 {
+    clear: both;
     display: none;
-    padding: 20px;
-    margin: 20px;
+    padding: 1px;
 }
 
 .btn-pizza1 {
