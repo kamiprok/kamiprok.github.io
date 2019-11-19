@@ -580,7 +580,7 @@ h1:hover {
     padding-bottom: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 200px;
+    height: 150px;
 }
 
 .wyniki2 {
@@ -589,7 +589,7 @@ h1:hover {
     padding-bottom: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 200px;
+    height: 150px;
 }
 
 #tak1 {
@@ -602,6 +602,8 @@ h1:hover {
 
 .cos1 {
     display: none;
+    padding: 20px;
+    margin: 20px;
 }
 
 

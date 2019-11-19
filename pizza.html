@@ -62,7 +62,7 @@
             </aside>
         </section>
         <section class="cos1" id="cos1">
-            Coś poszło nie tak...
+            <p>Coś poszło nie tak...</p>
         </section>
         <section class="przelicz">
             <button class="button-zadania" id="przelicz" onClick="myFunction()">Przelicz!</button>
@@ -74,12 +74,12 @@
 
         <footer>
             <h1></h1>
-            <a href="index.html#portfolio" class="button1" id="button4">Back</a>
+            <a href="index.html#portfolio" class="button1" id="">Back</a>
         </footer>
     </section>
 <script>
     function myFunction() {
-
+        document.getElementById("cos1").style.display = "none";
 
         p1 = document.getElementById("p1").value;
         c1 = document.getElementById("c1").value;
@@ -124,11 +124,17 @@
             document.getElementById("nie1").style.display = "block";
             document.getElementById("tak2").style.display = "block";
             document.getElementById("nie2").style.display = "none";
-        } else {
+        } else if (cena1 == cena2) {
             document.getElementById("tak1").style.display = "block";
             document.getElementById("nie1").style.display = "none";
             document.getElementById("tak2").style.display = "block";
             document.getElementById("nie2").style.display = "none";
+        } else {
+            document.getElementById("tak1").style.display = "none";
+            document.getElementById("nie1").style.display = "none";
+            document.getElementById("tak2").style.display = "none";
+            document.getElementById("nie2").style.display = "none";
+            document.getElementById("cos1").style.display = "block";
         }
     }
 </script>
