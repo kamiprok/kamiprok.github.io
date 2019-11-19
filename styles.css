@@ -606,6 +606,14 @@ h1:hover {
     margin: 20px;
 }
 
+.btn-pizza1 {
+    border-color: #1f1f1f;
+}
+
+.btn-pizza2:hover {
+    background-color: #d3d3d3;
+}
+
 
 /* Glow on hover */
 
