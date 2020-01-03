@@ -34,11 +34,12 @@ p {
 
 .navbar {
     text-align: center;
-    background-color: transparent;
+    background-color: #1b1b1b;
     width: 100%;
     vertical-align: middle;
     position: absolute;
-    top: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .navbar a, .navbar .button-menu {
@@ -120,7 +121,7 @@ h3 {
     font-weight: 1000;
     text-transform: uppercase;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h4 {
@@ -157,22 +158,19 @@ h4 {
     background-color: #000;
 }
 
-#button1, #button2, #button3 {
+#button1, #button2, #button3, #button4 {
     position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-#button4 {
-    position: absolute;
-    top: 88.8%;
+    bottom: 100px;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
 #button1:hover, #button2:hover, #button3:hover, #button4:hover {
     background-color: #d3d3d3;
+}
+
+#button1:active, #button2:active, #button3:active, #button4:active {
+    background-color: #C0C0C0;
 }
 
 .page {
@@ -196,8 +194,8 @@ h5 {
     font-weight: 800;
     font-size: 3rem;
     text-transform: uppercase;
-    margin: 40px;
-    margin-top: 80px;
+    margin-top: 70px;
+    margin-bottom: 20px;
 }
 
 h6 {
@@ -248,10 +246,11 @@ h6 {
 
 .footer {
     position: absolute;
-    top: 390%;
+    bottom: 0;
     left: 0;
-    height: 50px;
+    height: 80px;
     width: 100%;
+    background-color: #111;
     text-align: center;
 }
 
@@ -261,7 +260,7 @@ h6 {
     background-color: #333333;
     margin: auto;
     min-height: 400px;
-    width: 50%;
+    width: 60%;
     left: 0;
     right: 0;
     padding: 20px;
@@ -284,6 +283,19 @@ h6 {
     float: right;
     padding: 10px;
     margin: 10px;
+}
+
+.bio a, .bio a:visited {
+    text-decoration: none;
+    color: #daa54e;
+}
+
+.bio a:hover {
+    color: #eca93c;
+}
+
+.bio a:active {
+    color: #c48929;
 }
 
 @media only screen and (max-width: 980px){
@@ -411,7 +423,6 @@ h6 {
     }
 }
 
-
 #portret:hover {
     box-shadow: 0 0 8px 4px rgb(218, 165, 78, 0.2), 0 0 20px 10px rgb(218, 165, 78, 0.3);
 }
@@ -483,10 +494,15 @@ h1:hover {
     cursor: pointer;
 }
 
+.button-zadania:active {
+    background-color: #c48929;
+}
+
 .tech {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(150px, 1fr) );
-    width: 50%;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    max-width: 740px;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -495,9 +511,9 @@ h1:hover {
     padding: 10px;
     color: #131313;
     max-width: 150px;
-    max-height: 150px;
+    max-height: 170px;
     width: 150px;
-    height: 150px;
+    height: 170px;
 }
 
 .tech-item:hover {
