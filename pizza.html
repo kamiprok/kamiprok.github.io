@@ -15,7 +15,7 @@
 <body>
     <section class="pizza">
         <header>
-            <h2></h2>
+            <h2 style="text-transform: initial;">It's Pizza Time!</h2>
             <h1>Która pizza bardziej się opłaca?</h1>
         </header>
 
@@ -90,6 +90,12 @@
         p2 = document.getElementById("p2").value;
         c2 = document.getElementById("c2").value;
         i2 = document.getElementById("i2").value;
+        p1 = parseFloat(p1).toFixed(2);
+        c1 = parseFloat(c1).toFixed(2);
+        i1 = parseFloat(i1).toFixed(2);
+        p2 = parseFloat(p2).toFixed(2);
+        c2 = parseFloat(c2).toFixed(2);
+        i2 = parseFloat(i2).toFixed(2);
 
         pole1 = Math.PI * (Math.pow(p1/2, 2));
         pole1 = parseFloat(pole1).toFixed(2);
