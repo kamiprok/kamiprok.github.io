@@ -1,3 +1,3 @@
 # me
 
-My main website for testing stuff
+My vinyl collection
