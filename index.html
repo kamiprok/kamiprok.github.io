@@ -1,112 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>kamiprok</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="img/icon.ico" />
-<link rel="icon" href="img/icon.png" type="image/png"/>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script type="text/javascript" src="myScript.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VINYLE KAMKA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .section-transition {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .hidden-section {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+  }
+  .visible-section {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+  }
+  button {
+    border: none;
+    background: transparent;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    color: #9ca3af;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+  }
+    button::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0.15); /* Slightly larger dot */
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    border-radius: 100px;
+    opacity: 0.6; /* More visible dot */
+    transform-origin: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  button:hover::after,
+  button.active::after {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
+  button.active {
+    color: #ffffff;
+  }
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+</style>
 </head>
-
-<body>
-    <div class="container">
-        <div class="header" id="home">
-                <span class="hamburger"><h1>&#9776; Menu</h1>
-                    <span class="hamburger-menu">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#technology" >Technology</a></li>
-                            <li><a href="#portfolio" >Portfolio</a></li>
-                        </ul>
-                    </span>
-                </span>
-                <video loop muted autoplay poster="img/Travaho.jpg" class="video1">
-                    <source src="img/Travaho.webm" type="video/webm">
-                </video>
-                <div class="navbar">
-                    <a href="index.html">Home</a>
-                    <button class='button-menu' onclick='button11()'>About</button>
-                    <a href="index.html" style="width:300px" id='logo'>
-                        <h1>kamiprok</h1>
-                    </a>
-                    <button class='button-menu' onclick='button12()'>Technology</button>
-                    <button class='button-menu' onclick='button13()'>Portfolio</button>
-                </div>
-
-                <div id="empty1"></div>
-
-                <div class="main">
-                    <h3>Welcome to my website!</h3>
-                    <h4>This is my main site for school projects and testing stuff</h4>
-                    <button class='button1 glow-on-hover' id="button1" onclick='button11()'>Read More</button>
-                </div>
-        </div>
-
-        <div class="page" id="page1">
-            <h5 id="about">About me</h5>
-            <div id="portret">
-                <section class="foto">
-                <img src="img/portrait.jpg" id="zdjecie">
-                </section>
-                <section class="bio">
-                <h4>Welcome!</h4>
-                <p>I'm a student of Academy of Social Sciences in Warsaw. Currently on 3rd year of my Bachelor's degree.</p>
-                <p>I'm mostly interested in Python and HTML/CSS with a bit of JavaScript. Please visit <a href="https://github.com/kamiprok">my github page</a> to see my recent projects!</p>
-                </section>
-            </div>
-            <button onclick="button12()" class="button1" id="button2">More</button>
-        </div>
-
-        <div class="gold" id='gold1'>
-            <h5 id="technology">Technology</h5>
-            <h4>Useful links:</h4>
-            <div class='tech'>
-                <a href='https://www.javascript.com/'><div class='tech-item'><img src='img/js.png' class='tech-img'><p>JavaScript</p></div></a>
-                <a href='https://www.python.org/'><div class='tech-item'><img src='img/python.png' class='tech-img'><p>Python</p></div></a>
-                <a href='https://code.visualstudio.com/'><div class='tech-item'><img src='img/vscode.png' class='tech-img'><p>VS Code</p></div></a>
-                <a href='https://www.jetbrains.com/pycharm/'><div class='tech-item'><img src='img/pycharm.png' class='tech-img'><p>PyCharm</p></div></a>
-                <a href='https://github.com/'><div class='tech-item'><img src='img/github.png' class='tech-img'><p>GitHub</p></div></a>
-                <a href='https://stackoverflow.com/'><div class='tech-item'><img src='img/stack.png' class='tech-img'><p>Stack Overflow</p></div></a>
-                <a href='https://www.udemy.com/'><div class='tech-item'><img src='img/udemy.png' class='tech-img'><p>Udemy</p></div></a>
-                <a href='https://www.w3schools.com/'><div class='tech-item'><img src='img/w3s.png' class='tech-img'><p>W3Schools</p></div></a>
-            </div>
-            <button onclick="button13()" class="button1" id="button3">More</button>
-        </div>
-
-        <div class="prefooter" id='prefooter1'>
-            <h5 id="portfolio">Portfolio</h5>
-            <h4>Zadania</h4>
-            <a href='zadania/delta.html' class='button-zadania'>Delta</a>
-            <a href='zadania/zadanie-xml/zadanie.xml' class='button-zadania'>XML</a>
-            <a href='' class='button-zadania'>Logowanie</a>
-            <a href='' class='button-zadania'>Index2</a>
-            <h4>Mój GitHub</h4>
-            <a href='https://github.com/kamiprok' class='button-zadania'>GitHub</a>
-            <h4>Pizza Time</h4>
-            <a href='pizza.html' class='button-zadania'>Pizza</a>
-            <h4></h4>
-            <button onclick="button14()" class="button1" id="button4">Back to top</button>
-                <div class="footer">
-                    <p style="font-size:12px">Kamil Prokopiuk © Copyright 2020</p>
-                    <p style="font-size:12px">All rights reserved. Powered by <font style="color:#daa54e">kamiprok</style></font>.</p>
-                </div>
-        </div>
+<body class="bg-gray-900 text-white font-sans">
+  <header class="bg-gray-800 shadow">
+    <div class="container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between">
+      <h1 class="text-3xl font-bold mb-2 sm:mb-0">🎵 VINYLE KAMKA</h1>
+      <button id="navWishlist" onclick="showSection('wishlist'); highlightNav('wishlist');" class="active">CHCĘ</button>
+        <button id="navOwned" onclick="showSection('owned'); updateCarousel(); highlightNav('owned');" class="">MAM</button>
+        <button id="navInfo" onclick="showSection('info'); highlightNav('info');" class="">O CO TU CHODZI?</button>
+      
     </div>
+  </header>
 
-    <div class="navbar2" id='navbar2'>
-        <button class='button-top' onclick='button14()'>Home</button>
-        <button class='button-top' onclick='button11()'>About me</button>
-        <a href="index.html" style="width:300px"  id='logo'>
-            <h1>kamiprok</h1>
-        </a>
-        <button class='button-top' onclick='button12()'>Technology</button>
-        <button class='button-top' onclick='button13()'>Portfolio</button>
-    </div>
+  <main class="p-6 relative">
+    <!-- Wishlist Section -->
+    <section id="wishlist" class="section-transition visible-section">
+      <h2 class="text-2xl font-semibold mb-4">VINYLE KTÓRYCH NIE MAM</h2>
+      <hr class="my-6 border-gray-700">
+      <div class="flex justify-between items-center mb-4 gap-4" id="wishlist-controls">
+        <div id="carousel-nav" class="flex gap-2 transition-opacity duration-300">
+  <button onclick="prevAlbums()" class="p-2 text-xl" title="Previous">←</button>
+  <div class="w-px self-stretch bg-gradient-to-b from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400"></div>
+  <button onclick="nextAlbums()" class="p-2 text-xl" title="Next">→</button>
+</div>
+        <div class="space-x-2 view-toggle flex gap-2">
+  <button id="wishlistCarouselBtn" onclick="setViewMode('carousel')" title="Carousel View" class="p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path d="M9 5l-7 7 7 7M15 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+    <button id="wishlistGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
+    </svg>
+  </button>
+  <button id="wishlistListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+        </div>
+      </div>
+      <input id="wishlist-search" oninput="updateWishlist()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+      <div id="wishlist-albums" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
+      <div id="wishlist-list" class="hidden"></div>
+      
+    </section>
 
+    <!-- Owned Section -->
+    <section id="owned" class="section-transition hidden-section">
+      <h2 class="text-2xl font-semibold mb-4">TE VINYLE MAM</h2>
+      <hr class="my-6 border-gray-700">
+      <div class="flex justify-between items-center mb-4 gap-4">
+        <div id="owned-carousel-nav" class="flex gap-2 transition-opacity duration-300">
+  <button onclick="prevAlbums()" class="p-2 text-xl" title="Previous">←</button>
+  <div class="w-px self-stretch bg-gradient-to-b from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400"></div>
+  <button onclick="nextAlbums()" class="p-2 text-xl" title="Next">→</button>
+</div>
+        <div class="space-x-2 view-toggle flex gap-2">
+  <button id="ownedCarouselBtn" onclick="setViewMode('carousel')" title="Carousel View" class="p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path d="M9 5l-7 7 7 7M15 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+  <button id="ownedGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
+  </svg>
+  </button>
+  <button id="ownedListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+        </div>
+      </div>
+      <input id="owned-search" oninput="updateCarousel()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+      <div id="owned-albums" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
+      <div id="owned-list" class="hidden"></div>
+      <div>
+        <!-- Dynamically loaded album cards -->
+      </div>
+    </section>
+      <!-- Info Section -->
+    <section id="info" class="section-transition hidden-section">
+      <h2 class="text-2xl font-semibold mb-4">O CO TU CHODZI?</h2>
+      <p class="text-lg leading-relaxed">
+        Urodziny, Imieniny, Gwiazdka, Dzień Ojca? Nie wiesz co mi kupić? Nie zastanawiaj się!<br/>
+        W zakładce "CHCĘ" znajdziesz listę Vinyli, które chętnie dodam do mojej kolekcji!<br/>
+        Możesz też podziwiać moją kolekcję Vinyli w zakładce "MAM"!
+      </p>
+    </section>
+
+
+  <footer class="text-center py-4 text-sm text-gray-500">
+    Made with ❤️ by Kamko & ChatGPT
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
