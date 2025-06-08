@@ -17,8 +17,8 @@ const ownedAlbums = [
   { title: "Dark Side of the Moon", artist: "Pink Floyd", year: 1973, genre: "Progressive Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" },
   { title: "True Blue", artist: "Madonna", year: 1986, genre: "Dance-Pop", cover: "https://upload.wikimedia.org/wikipedia/en/e/e0/Madonna_-_True_Blue_%28album_cover%29.png" },
   { title: "Greatest Hits", artist: "Shakin' Stevens", year: 1984, genre: "Rock and Roll", cover: "https://upload.wikimedia.org/wikipedia/en/c/c5/Shakin%27_Stevens_Greatest_Hits_1984.jpg" },
-  { title: "Rumours", artist: "Fleetwood Mac", year: 1977, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG" },
-  { title: "Faith", artist: "George Michael", year: 1987, genre: "Pop", cover: "https://upload.wikimedia.org/wikipedia/en/9/9a/George_Michael_-_Faith.png" }
+  { title: "Faith", artist: "George Michael", year: 1987, genre: "Pop", cover: "https://upload.wikimedia.org/wikipedia/en/9/9a/George_Michael_-_Faith.png" },
+  { title: "Rumours", artist: "Fleetwood Mac", year: 1977, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG" }
 ];
 const wishlistAlbums = [
   { title: "The Rise and Fall of Ziggy Stardust", artist: "David Bowie", year: 1972, genre: "Glam Rock", cover: "https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg" },
