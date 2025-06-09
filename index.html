@@ -75,46 +75,59 @@
   ::-webkit-scrollbar-track {
     background: transparent;
   }
+  #mobile-menu button {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    font-weight: 600;
+    text-align: left;
+  }
 </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
   <header class="bg-gray-800 shadow">
     <div class="container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between">
       <h1 class="text-3xl font-bold mb-2 sm:mb-0">🎵 VINYLE KAMKA</h1>
-      <button id="navWishlist" onclick="showSection('wishlist'); highlightNav('wishlist');" class="active">CHCĘ</button>
-        <button id="navOwned" onclick="showSection('owned'); updateCarousel(); highlightNav('owned');" class="">MAM</button>
-        <button id="navInfo" onclick="showSection('info'); highlightNav('info');" class="">O CO TU CHODZI?</button>
-      
+      <!-- Mobile Hamburger -->
+      <div class="sm:hidden flex items-center">
+        <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
+          ☰
+        </button>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden sm:flex gap-4 items-center">
+        <button id="navWishlist" onclick="showSection('wishlist'); highlightNav('wishlist');" class="active">CHCĘ</button>
+        <button id="navOwned" onclick="showSection('owned'); updateOwned(); highlightNav('owned');">MAM</button>
+        <button id="navInfo" onclick="showSection('info'); highlightNav('info');">O CO TU CHODZI?</button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="sm:hidden hidden flex-col mt-4 space-y-2">
+        <button onclick="showSection('wishlist'); highlightNav('wishlist'); toggleMenu();" class="text-white">CHCĘ</button>
+        <button onclick="showSection('owned'); updateOwned(); highlightNav('owned'); toggleMenu();" class="text-white">MAM</button>
+        <button onclick="showSection('info'); highlightNav('info'); toggleMenu();" class="text-white">O CO TU CHODZI?</button>
+      </div>
     </div>
   </header>
 
   <main class="p-6 relative">
     <!-- Wishlist Section -->
     <section id="wishlist" class="section-transition visible-section">
-      <h2 class="text-2xl font-semibold mb-4">VINYLE KTÓRYCH NIE MAM</h2>
+      <h2 class="text-2xl font-semibold mb-4">VINYLE KTÓRE CHCĘ KUPIĆ</h2>
       <hr class="my-6 border-gray-700">
       <div class="flex justify-between items-center mb-4 gap-4" id="wishlist-controls">
-        <div id="carousel-nav" class="flex gap-2 transition-opacity duration-300">
-  <button onclick="prevAlbums()" class="p-2 text-xl" title="Previous">←</button>
-  <div class="w-px self-stretch bg-gradient-to-b from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400"></div>
-  <button onclick="nextAlbums()" class="p-2 text-xl" title="Next">→</button>
-</div>
         <div class="space-x-2 view-toggle flex gap-2">
-  <button id="wishlistCarouselBtn" onclick="setViewMode('carousel')" title="Carousel View" class="p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path d="M9 5l-7 7 7 7M15 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </button>
-    <button id="wishlistGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
-    </svg>
-  </button>
-  <button id="wishlistListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </button>
+          <button id="wishlistGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
+            </svg>
+          </button>
+          <button id="wishlistListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
         </div>
       </div>
       <input id="wishlist-search" oninput="updateWishlist()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
@@ -125,38 +138,25 @@
 
     <!-- Owned Section -->
     <section id="owned" class="section-transition hidden-section">
-      <h2 class="text-2xl font-semibold mb-4">TE VINYLE MAM</h2>
+      <h2 class="text-2xl font-semibold mb-4">VINYLE KTÓRE MAM</h2>
       <hr class="my-6 border-gray-700">
       <div class="flex justify-between items-center mb-4 gap-4">
-        <div id="owned-carousel-nav" class="flex gap-2 transition-opacity duration-300">
-  <button onclick="prevAlbums()" class="p-2 text-xl" title="Previous">←</button>
-  <div class="w-px self-stretch bg-gradient-to-b from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400"></div>
-  <button onclick="nextAlbums()" class="p-2 text-xl" title="Next">→</button>
-</div>
         <div class="space-x-2 view-toggle flex gap-2">
-  <button id="ownedCarouselBtn" onclick="setViewMode('carousel')" title="Carousel View" class="p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path d="M9 5l-7 7 7 7M15 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </button>
-  <button id="ownedGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
-  </svg>
-  </button>
-  <button id="ownedListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </button>
+          <button id="ownedGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
+            </svg>
+          </button>
+          <button id="ownedListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
         </div>
       </div>
-      <input id="owned-search" oninput="updateCarousel()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
+      <input id="owned-search" oninput="updateOwned()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
       <div id="owned-albums" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
       <div id="owned-list" class="hidden"></div>
-      <div>
-        <!-- Dynamically loaded album cards -->
-      </div>
     </section>
       <!-- Info Section -->
     <section id="info" class="section-transition hidden-section">
