@@ -58,12 +58,16 @@ function highlightNav(id) {
   document.getElementById("navOwned").classList.remove("active");
   document.getElementById("navWishlist").classList.remove("active");
   document.getElementById("navInfo").classList.remove("active");
+  document.querySelectorAll("#mobile-menu button").forEach(btn => btn.classList.remove("active"));
   if (id === "owned") {
     document.getElementById("navOwned").classList.add("active");
+    document.getElementById("mobileNavOwned")?.classList.add("active");
   } else if (id === "wishlist") {
     document.getElementById("navWishlist").classList.add("active");
+    document.getElementById("mobileNavWishlist")?.classList.add("active");
   } else if (id === "info") {
     document.getElementById("navInfo").classList.add("active");
+    document.getElementById("mobileNavInfo")?.classList.add("active");
   }
 }
 

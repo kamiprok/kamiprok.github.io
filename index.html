@@ -22,39 +22,35 @@
     pointer-events: auto;
     position: relative;
   }
-  button {
-    border: none;
+    button {
+    box-sizing: border-box;
+    border: 1.5px solid #ffffffee; /* or white if you prefer */
     background: transparent;
-    position: relative;
-    padding: 0.5rem 1rem;
-    margin: 0 0.25rem;
-    color: #9ca3af;
+    padding: 0.5rem !important;
+    margin: 1rem;
+    color: #ffffffee;
     font-weight: 600;
     font-size: 1rem;
     letter-spacing: 0.05em;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    border-radius: 0.3rem; /* rounded-md */
   }
-    button::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0.15); /* Slightly larger dot */
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
-    border-radius: 100px;
-    opacity: 0.6; /* More visible dot */
-    transform-origin: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  button:hover::after,
-  button.active::after {
-    transform: translateX(-50%) scaleX(1);
-    opacity: 1;
+  button:hover,
+  button.active {
+    color: #ffffffdd;
+    border-color: #ffffffdd;
   }
   button.active {
-    color: #ffffff;
+    background-color: #ffffffdd;
+    color: #1f2937; /* dark text, e.g. Tailwind’s gray-800 */
+    border-color: #ffffffdd;
+    font-weight: 600;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  }
+  button.active:hover {
+    background-color: #ffffffbb; /* Tailwind’s gray-100 */
+    border-color: #ffffffbb;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   }
   body {
     overflow-y: scroll;
@@ -76,11 +72,34 @@
     background: transparent;
   }
   #mobile-menu button {
+    box-sizing: border-box;
+    border: 1.5px solid #ffffffee; /* or white if you prefer */
     background: transparent;
-    border: none;
-    padding: 0.5rem;
+    padding: 0.5rem !important;
+    margin: 0.5rem;
+    color: #ffffffee;
     font-weight: 600;
-    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    border-radius: 0.3rem; /* rounded-md */
+  }
+  #mobile-menu button:hover,
+  #mobile-menu button.active {
+    color: #ffffffdd;
+    border-color: #ffffffdd;
+  }
+  #mobile-menu button.active {
+    background-color: #ffffffdd;
+    color: #1f2937; /* dark text, e.g. Tailwind’s gray-800 */
+    border-color: #ffffffdd;
+    font-weight: 600;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  }
+  #mobile-menu button.active:hover {
+    background-color: #ffffffbb; /* Tailwind’s gray-100 */
+    border-color: #ffffffbb;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   }
 </style>
 </head>
@@ -88,12 +107,6 @@
   <header class="bg-gray-800 shadow">
     <div class="container mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between">
       <h1 class="text-3xl font-bold mb-2 sm:mb-0">🎵 VINYLE KAMKA</h1>
-      <!-- Mobile Hamburger -->
-      <div class="sm:hidden flex items-center">
-        <button id="menu-toggle" class="text-white focus:outline-none text-2xl">
-          ☰
-        </button>
-      </div>
 
       <!-- Desktop Nav -->
       <nav class="hidden sm:flex gap-4 items-center">
@@ -103,10 +116,10 @@
       </nav>
 
       <!-- Mobile Menu -->
-      <div id="mobile-menu" class="sm:hidden hidden flex-col mt-4 space-y-2">
-        <button onclick="showSection('wishlist'); highlightNav('wishlist'); toggleMenu();" class="text-white">CHCĘ</button>
-        <button onclick="showSection('owned'); updateOwned(); highlightNav('owned'); toggleMenu();" class="text-white">MAM</button>
-        <button onclick="showSection('info'); highlightNav('info'); toggleMenu();" class="text-white">O CO TU CHODZI?</button>
+      <div id="mobile-menu" class="sm:hidden flex-col mt-4 space-y-2">
+        <button id="mobileNavWishlist" onclick="showSection('wishlist'); highlightNav('wishlist');" >CHCĘ</button>
+        <button id="mobileNavOwned" onclick="showSection('owned'); updateOwned(); highlightNav('owned');" >MAM</button>
+        <button id="mobileNavInfo" onclick="showSection('info'); highlightNav('info');" >O CO TU CHODZI?</button>
       </div>
     </div>
   </header>
@@ -118,16 +131,8 @@
       <hr class="my-6 border-gray-700">
       <div class="flex justify-between items-center mb-4 gap-4" id="wishlist-controls">
         <div class="space-x-2 view-toggle flex gap-2">
-          <button id="wishlistGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
-            </svg>
-          </button>
-          <button id="wishlistListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
+          <button id="wishlistGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">GRID</button>
+          <button id="wishlistListBtn" onclick="setViewMode('list')" title="List View" class="p-2">LIST</button>
         </div>
       </div>
       <input id="wishlist-search" oninput="updateWishlist()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
@@ -142,16 +147,8 @@
       <hr class="my-6 border-gray-700">
       <div class="flex justify-between items-center mb-4 gap-4">
         <div class="space-x-2 view-toggle flex gap-2">
-          <button id="ownedGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M5 5h4v4H5V5zm6 0h4v4h-4V5zM5 11h4v4H5v-4zm6 0h4v4h-4v-4z" />
-            </svg>
-          </button>
-          <button id="ownedListBtn" onclick="setViewMode('list')" title="List View" class="p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path d="M4 6h16M4 12h16M4 18h16M2 6h.01M2 12h.01M2 18h.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
+          <button id="ownedGridBtn" onclick="setViewMode('grid')" title="Grid View" class="p-2">GRID</button>
+          <button id="ownedListBtn" onclick="setViewMode('list')" title="List View" class="p-2">LIST</button>
         </div>
       </div>
       <input id="owned-search" oninput="updateOwned()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
