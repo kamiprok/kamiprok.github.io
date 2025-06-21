@@ -118,6 +118,7 @@ function updateWishlist() {
         </div>
       `;
       container.appendChild(card);
+      
     }
   });
 
