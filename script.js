@@ -113,7 +113,7 @@ function updateWishlist() {
       card.innerHTML = `
         <img src="${album.cover}" class="w-full h-80 object-cover" />
         <div class="p-4">
-          <h2 title="${album.title}" class="text-xl font-semibold truncate h-5">${album.title}</h2>
+          <h2 title="${album.title}" class="text-xl font-semibold truncate h-7">${album.title}</h2>
           <p class="text-sm text-gray-400">${album.artist} · ${album.year} · ${album.genre}</p>
         </div>
       `;
@@ -161,7 +161,7 @@ function updateOwned() {
       card.innerHTML = `
         <img src="${album.cover}" class="w-full h-80 object-cover" />
         <div class="p-4">
-          <h2 title="${album.title}" class="text-xl font-semibold truncate h-5">${album.title}</h2>
+          <h2 title="${album.title}" class="text-xl font-semibold truncate h-7">${album.title}</h2>
           <p class="text-sm text-gray-400">${album.artist} · ${album.year} · ${album.genre}</p>
         </div>
       `;
