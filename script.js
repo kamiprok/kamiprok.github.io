@@ -17,6 +17,9 @@ const ownedAlbums = [
 ];
 
 const wishlistAlbums = [
+  { title: "ABBA Gold (Limited Edition) Greatest Hits", artist: "ABBA", year: 1992, genre: "Europop", cover: "https://upload.wikimedia.org/wikipedia/en/3/30/ABBA_Gold_cover.png" },
+  { title: "Guns N' Roses Greatest Hits", artist: "Guns N' Roses", year: 2004, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/36/GreatestHits_Guns%27n%27Roses.jpg" },
+  { title: "Crazy World", artist: "Scorpions", year: 1990, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/f/f0/ScorpionsCrazyWorld.jpg" },
   { title: "The Rise and Fall of Ziggy Stardust", artist: "David Bowie", year: 1972, genre: "Glam Rock", cover: "https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg" },
   { title: "Led Zeppelin IV", artist: "Led Zeppelin", year: 1971, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg" },
   { title: "Random Access Memories", artist: "Daft Punk", year: 2013, genre: "Electronic", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Daft_Punk_-_Random_Access_Memories.png" },
