@@ -15,12 +15,14 @@
     pointer-events: none;
     position: absolute;
     width: 100%;
+    display: none;
   }
   .visible-section {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
     position: relative;
+    display: block;
   }
   button {
     display: inline-flex;
@@ -117,7 +119,7 @@
 </style>
 </head>
 
-<body class="bg-gray-900 text-white font-sans">
+<body class="min-h-screen flex flex-col bg-gray-900 text-white font-sans">
   <header class="bg-gray-800 shadow">
     <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
       <h1 class="text-3xl font-bold mb-2 sm:mb-0">🎵 VINYLE KAMKA</h1>
@@ -138,7 +140,7 @@
     </div>
   </header>
 
-  <main class="p-6 relative">
+  <main class="flex-1 p-6 relative">
     <!-- Wishlist Section -->
     <section id="wishlist" class="section-transition visible-section">
       <h2 class="text-2xl font-semibold mb-4">VINYLE KTÓRE CHCĘ KUPIĆ</h2>
@@ -178,7 +180,8 @@
         Możesz też podziwiać moją kolekcję Vinyli w zakładce "MAM"!
       </p>
     </section>
-
+  </main>
+  
   <footer class="text-center py-4 text-sm text-gray-500">
     Made with ❤️ by Kamko & ChatGPT
   </footer>
