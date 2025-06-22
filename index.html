@@ -33,7 +33,7 @@
     border: 1.5px solid #ffffffee; /* or white if you prefer */
     background: transparent;
     padding: 0.5rem !important;
-        padding-bottom: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
     margin: 1rem;
     color: #ffffffee;
     font-weight: 600;
@@ -41,7 +41,6 @@
     letter-spacing: 0.05em;
     transition: color 0.3s ease, border-color 0.3s ease;
     border-radius: 0.3rem; /* rounded-md */
-
   }
   button:hover,
   button.active {
@@ -84,9 +83,9 @@
     box-sizing: border-box;
     border: 1.5px solid #ffffffee; /* or white if you prefer */
     background: transparent;
-    padding: 0.35rem !important;
-    padding-bottom: 0.45rem !important;
-    margin: 0.35rem;
+    padding: 0.3rem !important;
+    padding-bottom: 0.4rem !important;
+    margin: 0.1rem;
     color: #ffffffee;
     font-weight: 600;
     font-size: 1rem;
@@ -111,8 +110,13 @@
     border-color: #ffffffbb;
     transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
   }
+  #info {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
 </style>
 </head>
+
 <body class="bg-gray-900 text-white font-sans">
   <header class="bg-gray-800 shadow">
     <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
@@ -148,7 +152,6 @@
       <input id="wishlist-search" oninput="updateWishlist()" type="text" placeholder="Szukaj..." class="mb-4 w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
       <div id="wishlist-albums" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
       <div id="wishlist-list" class="hidden"></div>
-      
     </section>
 
     <!-- Owned Section -->
@@ -165,6 +168,7 @@
       <div id="owned-albums" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
       <div id="owned-list" class="hidden"></div>
     </section>
+
       <!-- Info Section -->
     <section id="info" class="section-transition hidden-section">
       <h2 class="text-2xl font-semibold mb-4">O CO TU CHODZI?</h2>
@@ -174,7 +178,6 @@
         Możesz też podziwiać moją kolekcję Vinyli w zakładce "MAM"!
       </p>
     </section>
-
 
   <footer class="text-center py-4 text-sm text-gray-500">
     Made with ❤️ by Kamko & ChatGPT
