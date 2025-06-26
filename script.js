@@ -32,6 +32,42 @@ const wishlistAlbums = [
   { title: "The Wall", artist: "Pink Floyd", year: 1979, genre: "Rock Opera", cover: "https://upload.wikimedia.org/wikipedia/commons/b/b1/The_Wall_Cover.svg" }
 ];
 
+
+//visit counter
+const BIN_URL = 'https://api.jsonbin.io/v3/b/685d42848960c979a5b1d890'; 
+const API_KEY = '$2a$10$h7biLL/JPMQ8qb6GcRK4x.JMYiq3EhCXCg66NFAJHmbWUGeO8rwGy'; 
+
+async function fetchBinData() {
+  const response = await fetch(BIN_URL, { headers: { 'X-Master-Key': API_KEY } });
+  const result = await response.json();
+  return result.record;
+}
+
+async function updateBinData(data) {
+  await fetch(BIN_URL, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Master-Key': API_KEY
+    },
+    body: JSON.stringify(data)
+  });
+}
+
+async function updateVisitorCount() {
+  try {
+    const data = await fetchBinData();
+    data.count = (data.count || 0) + 1; // increment
+    await updateBinData(data);
+    document.getElementById('counter').textContent = data.count;
+  } catch (err) {
+    console.error('Visitor counter error:', err);
+    document.getElementById('counter').textContent = 'Error';
+  }
+}
+
+updateVisitorCount();
+
 function applyFadeTransition(element) {
   element.classList.add("opacity-0", "transition-opacity", "duration-300");
   requestAnimationFrame(() => {
