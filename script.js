@@ -25,7 +25,7 @@ const ownedAlbums = [
   { title: "niemożliwe", artist: "Kwiat Jabłoni", year: 2019, genre: "polski pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/niemozliwe-b-iext185211309.jpg" },
   { title: "sanah śpiewa Poezyje", artist: "sanah", year: 2022, genre: "polski pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/sanah-spiewa-poezyje-b-iext137248750.jpg" },
 
-  { title: "Manam", artist: "Manam", year: 1981, genre: "Rock", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/maanam-plyta-winylowa-b-iext182460865.jpg" },
+  { title: "Maanam", artist: "Maanam", year: 1981, genre: "Rock", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/maanam-plyta-winylowa-b-iext182460865.jpg" },
   { title: "Halina Kunicka", artist: "Halina Kunicka", year: 1966, genre: "polski pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/halina-kunicka-b-iext125074356.jpg" },
   { title: "Urszula Czwarty Raz", artist: "Urszula", year: 1988, genre: "polski pop", cover: "https://winylmarket.com/filez/2020/08/R-2097521-1346260521-6657.jpeg.jpg" },
   { title: "Rytmy Młodych", artist: "Various", year: 1965, genre: "polski pop", cover: "https://i.discogs.com/4bMcl2qCVneETfRkQYcIRShBDXlGt2i-MoWKs2dYCMY/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5NDMz/ODktMTM1MDA0NDAz/NS0xMTAyLmpwZWc.jpeg" },
