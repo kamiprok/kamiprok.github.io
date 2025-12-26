@@ -12,6 +12,8 @@ const ownedAlbums = [
   { title: "Greatest Hits II", artist: "Queen", year: 1991, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/38/Queen_-_Greatest_Hits_2.png" },
   { title: "Abbey Road (50th Anniversary Edition)", artist: "The Beatles", year: 1969, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg" },
   { title: "The Rise and Fall of Ziggy Stardust", artist: "David Bowie", year: 1972, genre: "Glam Rock", cover: "https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg" },
+  { title: "Crazy World", artist: "Scorpions", year: 1990, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/f/f0/ScorpionsCrazyWorld.jpg" },
+  { title: "Led Zeppelin IV", artist: "Led Zeppelin", year: 1971, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg" },
   { title: "Dark Side of the Moon", artist: "Pink Floyd", year: 1973, genre: "Progressive Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" },
   { title: "Heart Of Glass I Inne Przeboje", artist: "Various", year: 1979, genre: "Pop", cover: "https://i.discogs.com/TdqmQrvuMsTK0k09kUCo7WChVfEcb-hmif_tohFXDo0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY0MDEz/MDgtMTQxODMzMjY3/My02NDk5LmpwZWc.jpeg" },
   { title: "Bad", artist: "Michael Jackson", year: 1987, genre: "Pop", cover: "https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" },
@@ -40,8 +42,6 @@ const ownedAlbums = [
 const wishlistAlbums = [
   { title: "ABBA Gold (Limited Edition) Greatest Hits", artist: "ABBA", year: 1992, genre: "Europop", cover: "https://upload.wikimedia.org/wikipedia/en/3/30/ABBA_Gold_cover.png" },
   { title: "Guns N' Roses Greatest Hits", artist: "Guns N' Roses", year: 2004, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/36/GreatestHits_Guns%27n%27Roses.jpg" },
-  { title: "Crazy World", artist: "Scorpions", year: 1990, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/f/f0/ScorpionsCrazyWorld.jpg" },
-  { title: "Led Zeppelin IV", artist: "Led Zeppelin", year: 1971, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg" },
   { title: "Greatest Hits", artist: "Aerosmith", year: 1980, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/4/46/AerosmithGreatestHits.jpg" },
   { title: "Random Access Memories", artist: "Daft Punk", year: 2013, genre: "Electronic", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Daft_Punk_-_Random_Access_Memories.png" },
   { title: "Hotel California", artist: "Eagles", year: 1976, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg" },
