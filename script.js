@@ -10,10 +10,12 @@ const ownedAlbums = [
   { title: "Money for Nothing", artist: "Dire Straits", year: 1985, genre: "Pop Rock", cover: "https://upload.wikimedia.org/wikipedia/en/8/8c/Money_for_Nothing_single.JPG" },
   { title: "Greatest Hits", artist: "Queen", year: 1981, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/0/02/Queen_Greatest_Hits.png" },
   { title: "Greatest Hits II", artist: "Queen", year: 1991, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/38/Queen_-_Greatest_Hits_2.png" },
-  { title: "Abbey Road (50th Anniversary Edition)", artist: "The Beatles", year: 1969, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg" },
+  { title: "Abbey Road (50th Anniversary Edition)", artist: "The Beatles", year: 1969, genre: "Rock", cover: "https://i.discogs.com/cbf37J_Xnkf1zITpO_To5UDxU-jPoGMgN6xGd-gTbL8/rs:fit/g:sm/q:90/h:591/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0OTg4/MDctMTQyNTI3OTI5/Ni0xMjM1LmpwZWc.jpeg" },
   { title: "The Rise and Fall of Ziggy Stardust", artist: "David Bowie", year: 1972, genre: "Glam Rock", cover: "https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg" },
   { title: "Crazy World", artist: "Scorpions", year: 1990, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/f/f0/ScorpionsCrazyWorld.jpg" },
   { title: "Led Zeppelin IV", artist: "Led Zeppelin", year: 1971, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg" },
+
+
   { title: "Dark Side of the Moon", artist: "Pink Floyd", year: 1973, genre: "Progressive Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" },
   { title: "Heart Of Glass I Inne Przeboje", artist: "Various", year: 1979, genre: "Pop", cover: "https://i.discogs.com/TdqmQrvuMsTK0k09kUCo7WChVfEcb-hmif_tohFXDo0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY0MDEz/MDgtMTQxODMzMjY3/My02NDk5LmpwZWc.jpeg" },
   { title: "Bad", artist: "Michael Jackson", year: 1987, genre: "Pop", cover: "https://upload.wikimedia.org/wikipedia/en/5/51/Michael_Jackson_-_Bad.png" },
@@ -22,7 +24,7 @@ const ownedAlbums = [
   { title: "Greatest Hits", artist: "Shakin' Stevens", year: 1984, genre: "Rock and Roll", cover: "https://upload.wikimedia.org/wikipedia/en/c/c5/Shakin%27_Stevens_Greatest_Hits_1984.jpg" },
   { title: "Keeper of the Seven Keys Part 1", artist: "Helloween", year: 1987, genre: "Power Metal", cover: "https://upload.wikimedia.org/wikipedia/en/8/8b/Keeper_of_the_Seven_Keys_Part_1.jpg" },
 
-  { title: "Po prostu Krawczyk", artist: "Krzysztof Krawczyk", year: 2023, genre: "Polski Pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/po-prostu-krawczyk-antologia-przebojow-plyta-winylowa-b-iext153085930.jpg" },
+  { title: "Po prostu Krawczyk", artist: "Krzysztof Krawczyk", year: 2023, genre: "Polski Pop", cover: "https://i.discogs.com/0CoujFMBpFYytcC9glLq36zElq6FWHJihwExJ4iO_78/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5MDQw/MzI4LTE3MDExNjQ0/MTAtMzg5OS5qcGVn.jpeg" },
   { title: "Dusze kobiet", artist: "Zbigniew Wodecki", year: 1987, genre: "Polski Pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/dusze-kobiet-b-iext203168656.jpg" },
   { title: "Sun Machine", artist: "Myslovitz", year: 1996, genre: "Polski rock", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/sun-machine-plyta-winylowa-b-iext197701944.jpg" },
   { title: "Akustycznie - Suplement", artist: "Dżem", year: 1994, genre: "Polski rock", cover: "https://polskienagrania.com.pl/img/product_media/1001-2000/Towar_71622_255051.png" },
@@ -46,6 +48,7 @@ const wishlistAlbums = [
   { title: "Random Access Memories", artist: "Daft Punk", year: 2013, genre: "Electronic", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Daft_Punk_-_Random_Access_Memories.png" },
   { title: "Hotel California", artist: "Eagles", year: 1976, genre: "Rock", cover: "https://upload.wikimedia.org/wikipedia/en/4/49/Hotelcalifornia.jpg" },
   { title: "Thriller", artist: "Michael Jackson", year: 1982, genre: "Pop", cover: "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png" },
+  { title: "Highway To Hell", artist: "AC/DC", year: 1979, genre: "Hard Rock", cover: "https://i.discogs.com/L07pI7jq9D0LtQ3aAzLM7vHb8GU-nvU9UYWHwx4RnXo/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1ODQw/MzAtMTQ3MTc5NjE1/NS02MDUxLmpwZWc.jpeg" },
   { title: "Back in Black", artist: "AC/DC", year: 1980, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/commons/9/92/ACDC_Back_in_Black.png" },
   { title: "The Wall", artist: "Pink Floyd", year: 1979, genre: "Rock Opera", cover: "https://upload.wikimedia.org/wikipedia/commons/b/b1/The_Wall_Cover.svg" }
 ];
