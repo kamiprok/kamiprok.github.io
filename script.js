@@ -13,7 +13,7 @@ const ownedAlbums = [
   { title: "Abbey Road (50th Anniversary Edition)", artist: "The Beatles", year: 1969, genre: "Rock", cover: "https://i.discogs.com/cbf37J_Xnkf1zITpO_To5UDxU-jPoGMgN6xGd-gTbL8/rs:fit/g:sm/q:90/h:591/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0OTg4/MDctMTQyNTI3OTI5/Ni0xMjM1LmpwZWc.jpeg" },
   { title: "The Rise and Fall of Ziggy Stardust", artist: "David Bowie", year: 1972, genre: "Glam Rock", cover: "https://upload.wikimedia.org/wikipedia/en/0/01/ZiggyStardust.jpg" },
   { title: "Crazy World", artist: "Scorpions", year: 1990, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/f/f0/ScorpionsCrazyWorld.jpg" },
-  { title: "Led Zeppelin IV", artist: "Led Zeppelin", year: 1971, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/en/2/26/Led_Zeppelin_-_Led_Zeppelin_IV.jpg" },
+  { title: "Led Zeppelin IV", artist: "Led Zeppelin", year: 1971, genre: "Hard Rock", cover: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Zeppelin_IV.jpg" },
 
 
   { title: "Dark Side of the Moon", artist: "Pink Floyd", year: 1973, genre: "Progressive Rock", cover: "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" },
@@ -26,16 +26,16 @@ const ownedAlbums = [
 
   { title: "Po prostu Krawczyk", artist: "Krzysztof Krawczyk", year: 2023, genre: "Polski Pop", cover: "https://i.discogs.com/0CoujFMBpFYytcC9glLq36zElq6FWHJihwExJ4iO_78/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5MDQw/MzI4LTE3MDExNjQ0/MTAtMzg5OS5qcGVn.jpeg" },
   { title: "Dusze kobiet", artist: "Zbigniew Wodecki", year: 1987, genre: "Polski Pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/dusze-kobiet-b-iext203168656.jpg" },
-  { title: "Sun Machine", artist: "Myslovitz", year: 1996, genre: "Polski rock", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/sun-machine-plyta-winylowa-b-iext197701944.jpg" },
-  { title: "Akustycznie - Suplement", artist: "Dżem", year: 1994, genre: "Polski rock", cover: "https://polskienagrania.com.pl/img/product_media/1001-2000/Towar_71622_255051.png" },
-  { title: "niemożliwe", artist: "Kwiat Jabłoni", year: 2019, genre: "Polski Pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/niemozliwe-plyta-winylowa-b-iext201078552.jpg" },
+  { title: "Sun Machine", artist: "Myslovitz", year: 1996, genre: "Polski Rock", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/sun-machine-plyta-winylowa-b-iext197701944.jpg" },
+  { title: "Akustycznie - Suplement", artist: "Dżem", year: 1994, genre: "Polski Rock", cover: "https://polskienagrania.com.pl/img/product_media/1001-2000/Towar_71622_255051.png" },
+  { title: "niemożliwe", artist: "Kwiat Jabłoni", year: 2019, genre: "Polski Pop", cover: "https://i.discogs.com/Ioz3vLKRoWoWx9L_osnGHyagC_KQYWuDM1HSPSGqM90/rs:fit/g:sm/q:90/h:550/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMjk2/ODQ1LTE1NTUxMTY4/ODktMjQ5MS5qcGVn.jpeg" },
   { title: "sanah śpiewa Poezyje", artist: "sanah", year: 2022, genre: "Polski Pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/sanah-spiewa-poezyje-plyta-winylowa-b-iext189746562.jpg" },
 
   { title: "Maanam", artist: "Maanam", year: 1981, genre: "Rock", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/maanam-plyta-winylowa-b-iext197679413.jpg" },
   { title: "Halina Kunicka", artist: "Halina Kunicka", year: 1966, genre: "Polski Pop", cover: "https://ecsmedia.pl/cdn-cgi/image/format=webp,/c/halina-kunicka-b-iext125074356.jpg" },
   { title: "Urszula Czwarty Raz", artist: "Urszula", year: 1988, genre: "Polski Pop", cover: "https://winylmarket.com/filez/2020/08/R-2097521-1346260521-6657.jpeg.jpg" },
   { title: "Rytmy Młodych", artist: "Various", year: 1965, genre: "Polski Pop", cover: "https://i.discogs.com/4bMcl2qCVneETfRkQYcIRShBDXlGt2i-MoWKs2dYCMY/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5NDMz/ODktMTM1MDA0NDAz/NS0xMTAyLmpwZWc.jpeg" },
-  { title: "Powróćmy Jak Za Dawnych Lat (Piosenki z programu telewizyjnego)", artist: "Various", year: 1982, genre: "Polski Pop", cover: "https://plytygramofonowe.pl/hpeciai/2b390c9831e91892ab5ed01b6711b649/pol_pl_Various-Piosenki-Z-Programu-Telewizyjnego-Powrocmy-Jak-Za-Dawnych-Lat-Hits-Of-The-Days-Gone-By-1982-Poland-Vinyl-52070_1.jpg" },
+  { title: "Powróćmy Jak Za Dawnych Lat (Piosenki z programu telewizyjnego)", artist: "Various", year: 1982, genre: "Polski Pop", cover: "https://i.discogs.com/VFtdA-SDRUZQln1CLKZa9Je_sam7Ikm41IvhuBZTakk/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk5NTYw/OC0xMTgyMDczNjM3/LmpwZWc.jpeg" },
   { title: "Dzieła Wszystkie", artist: "Fryderyk Chopin", year: 2010, genre: "Classical", cover: "https://i.discogs.com/t4shVHFxarx264iO-EoNMRxCQAqgWptWYvRY3ePx6Pc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYyMjYz/ODItMTQxNDM1NjA2/MC0zMzE0LmpwZWc.jpeg" },
   { title: "Słynne Tanga i Walce", artist: "Various", year: 1965, genre: "Classical", cover: "https://i.discogs.com/5lFhr6nOQ1J8Q-PedEJ50TED1ptxehK78lKZVKeg_08/rs:fit/g:sm/q:90/h:520/w:511/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2MDYx/MzUtMTMwMTE2NjQ2/NC5qcGVn.jpeg" },
   { title: "Akademia Pana Kleksa", artist: "Various", year: 1983, genre: "Polski Pop", cover: "https://i.discogs.com/w_Wk-Qi7gXK2knPrH8jlMK9cZiTDIAQwaurd4GaWjt8/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY1ODM4/MC0xMTQ0MzM5NDM5/LmpwZWc.jpeg" }
